@@ -1,0 +1,80 @@
+---
+title: "Carregando Dados"
+format: docusaurus-md
+---
+
+# Carregando Dados
+
+Para usar as bases de dados do AmazonasDataHub, primeiramente, garanta que o pacote já esteja instalado (veja a aba de Tutorial - Instalação).
+
+Carregue o pacote usando a função `library()`:
+
+```{r}
+#| eval: false
+library(amazonasdatahub)
+```
+```{r}
+#| echo: false
+require(amazonasdatahub) #dev
+```
+
+## Dados do AmazonasDataHub
+
+Até o momento, o pacote `amazonasdatahub` conta com quatro bases de dados para você, estudante, estatístico ou entusiasta, para analisar e aplicar métodos estatísticos.
+
+- base_manaus: Time series with Extreme Values of Limited Range;
+- malaria_amazonas: An integrated dataset of malaria notifications in the state of Amazonas;
+- pib_trimestral: Gross Domestic Product - GDP of Amazonas;
+- rionegro_amazonas: A dataset of the Rio Negro River (Amazonas) level from 2003 to 2023.
+
+Assim que o pacote é carregado, essas bases de dados já podem ser acessadas.
+
+### Documentação
+
+Cada base de dados do `amazonasdatahub` é documentada, explicando detalhes sobre a base de dados e o que cada variável representa. Para ver a documentação, basta utilizar o `?` precedido do nome da base de dados.
+
+```{r}
+?base_manaus
+?malaria_amazonas
+?pib_trimestral
+?rionegro_amazonas
+```
+
+## Dados - PIB Trimestral
+
+### Prévia dos dados
+
+Com o AmazonasDataHub instalado e os dados carregados, você já pode utilizar os datasets desse pacote.
+
+```{r}
+head(pib_trimestral, 2)
+```
+
+### Estatísticas Descritivas
+
+Você pode aplicar a função `summary` para ver as estatísticas descritivas desses dados:
+
+```{r}
+summary(pib_trimestral)
+```
+
+## Dados - Nível do Rio Negro
+
+O AmazonasDataHub inclui um dataset `rionegro_amazonas`, que possui dados do nível do Rio Negro, de 2003 a 2023.
+
+### Prévia dos dados
+
+```{r}
+head(rionegro_amazonas)
+```
+
+
+### Estatísticas Descritivas
+
+```{r}
+summary(rionegro_amazonas)
+```
+
+
+
+

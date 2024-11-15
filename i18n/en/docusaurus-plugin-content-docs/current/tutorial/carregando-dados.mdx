@@ -1,0 +1,201 @@
+---
+title: Importing Data
+format: docusaurus-md
+slug: /importing-data
+---
+
+
+
+
+# Importing Data
+
+To use AmazonasDataHub’s datasets, make sure you already have the
+package installed (see Tutorial - Install). Para usar as bases de dados
+do AmazonasDataHub, primeiramente, garanta que o pacote já esteja
+instalado (veja a aba de Tutorial - Instalação).
+
+Carregue o pacote usando a função `library()`: Import the package using
+`library()`
+
+```r
+library(amazonasdatahub)
+```
+
+## AmazonasDataHub - Datasets
+
+Until now, the `amazonasdatahub` package includes four datasets for you,
+wheter you are a student, statistician, or enthusiast, to analyze and
+apply statistical methods.
+
+Até o momento, o pacote `amazonasdatahub` conta com quatro bases de
+dados para você, estudante, estatístico ou entusiasta, para analisar e
+aplicar métodos estatísticos.
+
+-   base_manaus: Time series with Extreme Values of Limited Range;
+-   malaria_amazonas: An integrated dataset of malaria notifications in
+    the state of Amazonas;
+-   pib_trimestral: Gross Domestic Product - GDP of Amazonas;
+-   rionegro_amazonas: A dataset of the Rio Negro River (Amazonas) level
+    from 2003 to 2023.
+
+As soon as the package is loaded, these datasets can be accessed.
+
+Assim que o pacote é carregado, essas bases de dados já podem ser
+acessadas.
+
+### Documentation
+
+Each dataset of `amazonasdatahub` is documented, explaining details
+about the dataset and what each variable represents. To view the
+documentation, simply use `?` followed by the dataset name.
+
+Cada base de dados do `amazonasdatahub` é documentada, explicando
+detalhes sobre a base de dados e o que cada variável representa. Para
+ver a documentação, basta utilizar o `?` precedido do nome da base de
+dados.
+
+```r
+?base_manaus
+?malaria_amazonas
+?pib_trimestral
+?rionegro_amazonas
+```
+
+## Data - Quarterly GDP
+
+### Data preview
+
+With `amazonadatahub` installed and the data loaded, you can use the
+datasets simply by declaring their names.
+
+Com o AmazonasDataHub instalado e os dados carregados, você já pode
+utilizar os datasets desse pacote.
+
+```r
+head(pib_trimestral, 2)
+```
+
+``` text
+  year quarter agriculture livestock forest_fishing_prod extractive_ind
+1 2010       1    336.8214  90.83984            78.59447       278.5944
+2 2010       2    358.7650  96.75799            83.71485       296.7447
+  manufacturing_ind basic_infrastructure construction vehicle_retail_repair
+1          3599.861             268.0974     756.8299              1304.421
+2          3834.390             285.5638     806.1369              1389.403
+  transport_storage_post accomodation_food information_communication
+1               253.5930          454.2111                  139.1699
+2               270.1144          483.8027                  148.2368
+  financial_activities real_state_activities professional_activities
+1             166.1889              885.5208                459.9348
+2             177.0159              943.2118                489.8992
+  public_admin_defense_health_edu private_edu_health art_culture_sport
+1                        2003.139           90.40687          79.95082
+2                        2133.642           96.29682          85.15956
+  domestic_services    taxes
+1          246.9145 2393.526
+2          263.0008 2549.463
+```
+
+### Descriptive Statistics
+
+You can use the `summary` to check the descriptive statistics:
+
+Você pode aplicar a função `summary` para ver as estatísticas
+descritivas desses dados:
+
+```r
+summary(pib_trimestral)
+```
+
+``` text
+      year      quarter  agriculture      livestock      forest_fishing_prod
+ Min.   :2010   1:12    Min.   :336.8   Min.   : 90.84   Min.   : 78.59     
+ 1st Qu.:2013   2:12    1st Qu.:618.9   1st Qu.:130.10   1st Qu.:402.61     
+ Median :2016   3:12    Median :691.7   Median :139.76   Median :455.13     
+ Mean   :2016   4:12    Mean   :671.8   Mean   :140.56   Mean   :427.61     
+ 3rd Qu.:2018           3rd Qu.:759.9   3rd Qu.:147.44   3rd Qu.:500.30     
+ Max.   :2021           Max.   :888.6   Max.   :209.38   Max.   :554.96     
+ extractive_ind   manufacturing_ind basic_infrastructure  construction   
+ Min.   : 78.73   Min.   :3384      Min.   : 268.1       Min.   : 678.1  
+ 1st Qu.:299.34   1st Qu.:4102      1st Qu.: 423.9       1st Qu.: 791.0  
+ Median :386.39   Median :4829      Median : 480.1       Median : 873.6  
+ Mean   :446.59   Mean   :5030      Mean   : 643.9       Mean   : 878.2  
+ 3rd Qu.:619.24   3rd Qu.:5656      3rd Qu.: 834.1       3rd Qu.: 961.3  
+ Max.   :912.02   Max.   :7878      Max.   :1376.5       Max.   :1134.7  
+ vehicle_retail_repair transport_storage_post accomodation_food
+ Min.   :1304          Min.   : 253.6         Min.   :355.1    
+ 1st Qu.:1866          1st Qu.: 452.5         1st Qu.:459.5    
+ Median :2109          Median : 724.7         Median :508.7    
+ Mean   :2110          Mean   : 647.1         Mean   :550.9    
+ 3rd Qu.:2337          3rd Qu.: 804.5         3rd Qu.:651.6    
+ Max.   :3143          Max.   :1068.6         Max.   :846.6    
+ information_communication financial_activities real_state_activities
+ Min.   :139.2             Min.   :166.2        Min.   : 885.5       
+ 1st Qu.:193.4             1st Qu.:245.1        1st Qu.:1070.1       
+ Median :280.2             Median :348.6        Median :1534.4       
+ Mean   :270.4             Mean   :358.8        Mean   :1466.0       
+ 3rd Qu.:314.7             3rd Qu.:469.8        3rd Qu.:1736.9       
+ Max.   :434.9             Max.   :564.6        Max.   :2073.7       
+ professional_activities public_admin_defense_health_edu private_edu_health
+ Min.   : 459.9          Min.   :2003                    Min.   : 90.41    
+ 1st Qu.: 707.6          1st Qu.:2923                    1st Qu.:149.11    
+ Median : 936.3          Median :3725                    Median :366.29    
+ Mean   : 917.0          Mean   :3791                    Mean   :307.12    
+ 3rd Qu.:1082.9          3rd Qu.:4533                    3rd Qu.:433.22    
+ Max.   :1425.1          Max.   :5941                    Max.   :571.92    
+ art_culture_sport domestic_services     taxes     
+ Min.   : 79.95    Min.   :173.3     Min.   :2394  
+ 1st Qu.:107.81    1st Qu.:196.0     1st Qu.:3257  
+ Median :225.95    Median :217.2     Median :3602  
+ Mean   :197.07    Mean   :252.9     Mean   :3773  
+ 3rd Qu.:250.64    3rd Qu.:293.5     3rd Qu.:4107  
+ Max.   :341.28    Max.   :436.5     Max.   :5828  
+```
+
+## Dataset - Negro River Level
+
+The `amazonasdatahub` package includes a dataset called
+`rionegro_amazonas`, which contains data on the water level of the Negro
+River from 2003 to 2023.
+
+O AmazonasDataHub inclui um dataset `rionegro_amazonas`, que possui
+dados do nível do Rio Negro, de 2003 a 2023.
+
+### Dados Preview
+
+```r
+head(rionegro_amazonas)
+```
+
+``` text
+  level_m increase_decrease_cm day month year semester       date
+1   21.75                    5   1     1 2003        1 2003-01-01
+2   21.81                    6   2     1 2003        1 2003-01-02
+3   21.87                    6   3     1 2003        1 2003-01-03
+4   21.92                    5   4     1 2003        1 2003-01-04
+5   21.98                    6   5     1 2003        1 2003-01-05
+6   22.04                    6   6     1 2003        1 2003-01-06
+```
+
+### Descriptive Statistics
+
+```r
+summary(rionegro_amazonas)
+```
+
+``` text
+    level_m      increase_decrease_cm      day            month       
+ Min.   : 0.00   Min.   :-40.00000    Min.   : 1.00   Min.   : 1.000  
+ 1st Qu.:20.58   1st Qu.: -4.00000    1st Qu.: 8.00   1st Qu.: 4.000  
+ Median :24.59   Median :  2.00000    Median :16.00   Median : 7.000  
+ Mean   :23.90   Mean   : -0.03423    Mean   :15.73   Mean   : 6.523  
+ 3rd Qu.:27.41   3rd Qu.:  5.00000    3rd Qu.:23.00   3rd Qu.:10.000  
+ Max.   :30.02   Max.   : 34.00000    Max.   :31.00   Max.   :12.000  
+      year         semester          date           
+ Min.   :2003   Min.   :1.000   Min.   :2003-01-01  
+ 1st Qu.:2008   1st Qu.:1.000   1st Qu.:2008-04-01  
+ Median :2013   Median :2.000   Median :2013-07-01  
+ Mean   :2013   Mean   :1.504   Mean   :2013-07-01  
+ 3rd Qu.:2018   3rd Qu.:2.000   3rd Qu.:2018-09-30  
+ Max.   :2023   Max.   :2.000   Max.   :2023-12-31  
+```

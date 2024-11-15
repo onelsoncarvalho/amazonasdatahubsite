@@ -1,0 +1,227 @@
+---
+title: "Visualização e Análise dos dados"
+format: docusaurus-md
+---
+
+Veja como facilmente criar gráficos dos dados disponíveis nesse pacote.
+
+```{r}
+library(amazonasdatahub)
+```
+
+### Visualização de Séries Temporais
+
+Usando o `dplyr` e o `ggplot2` para fazer análises de forma prática e rápida:
+
+
+#### PIB Trimestral do Amazonas
+
+```{r}
+require(dplyr)
+require(ggplot2)
+
+pib_trimestral %>%
+  select(year, taxes) %>%
+  ggplot(., aes(x = year, y = taxes)) +
+  geom_line(size = 1L, colour = "#cb181d") +
+  geom_hline(
+        yintercept = mean(pib_trimestral$taxes),
+        linetype = "dashed",
+        size = 1
+  ) +
+  theme_light() +
+  theme(
+        plot.title = element_text(face = "bold", size = 16)
+  ) +
+  labs(
+       x = "Ano",
+       y = "Impostos",
+       title = "PIB Trimestral do Amazonas",
+       subtitle = "De 2010 a 2021"
+  )
+```
+
+
+#### Nível do Rio Negro
+
+```{r}
+#| code-fold: true
+
+require(dplyr)
+require(ggplot2)
+
+# Filtrando datas para o segundo semestre de 2010
+rionegro_amazonas_2010_02 <- rionegro_amazonas %>%
+  filter(date >= "2010-06-01" & date <= "2010-12-31")
+
+# Visualização Gráfica
+rionegro_amazonas_2010_02 %>%
+  ggplot(., aes(x = date, y = level_m)) +
+  geom_line(size = 1L, colour = "#006994") +
+  geom_hline(
+        aes(
+            yintercept = mean(rionegro_amazonas_2010_02$level_m),
+            color = "Média"
+        ),
+        linetype = "dashed",
+        size = 1
+  ) +
+  geom_hline(
+        aes(
+            yintercept = min(rionegro_amazonas_2010_02$level_m),
+            color = "Mínimo"
+        ),
+        linetype = "dotted",
+        size = 1
+  ) +
+  geom_hline(
+        aes(
+            yintercept = max(rionegro_amazonas_2010_02$level_m),
+            color = "Máximo"
+        ),
+        linetype = "dotted",
+        size = 1
+  ) +
+  scale_color_manual(
+        name = "Estatísticas",
+        values = c(
+                   "Média" = "orange",
+                   "Mínimo" = "red",
+                   "Máximo" = "green"
+                  )) +
+  scale_x_date(
+        date_breaks = "1 month"
+  ) +
+  theme_light() +
+  theme(
+        plot.title = element_text(face = "bold", size = 16)
+  ) +
+  labs(
+       x = "Ano",
+       y = "Nível do rio em metros",
+       title = "Nível do Rio Negro do 2º semestre de 2010 (Amazonas)"
+  )
+```
+
+## Faça análises detalhadas
+
+Parte do trabalho do Estatístico é identificar e encontrar certos erros e incoerências nos dados. Vejamos que o gráfico acima mostra que o nível do Rio Negro em metros esteve em 0. Isso é estranho e incomum, pois indicaria que o rio secou totalmente.
+
+Podemos plotar os gráficos do tipo boxplot para termos noções dos valores outliers.
+
+```{r}
+#| echo: false
+boxplot1 <- rionegro_amazonas_2010_02 %>%
+  ggplot(aes(x = date, y = level_m)) +
+  theme_minimal() +
+  geom_boxplot() +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 0.5) +
+  labs(
+    x = "Mês",
+    y = "Nível do Rio (m)"
+  )
+
+boxplot2 <- rionegro_amazonas_2010_02 %>%
+  ggplot(aes(x = date, y = increase_decrease_cm)) +
+  theme_minimal() +
+  geom_boxplot() +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 0.5) +
+  labs(
+    x = "Mês",
+    y = "Aumento ou Diminuição (cm)"
+  )
+
+gridExtra::grid.arrange(boxplot1, boxplot2, ncol = 2)
+```
+
+Podemos concluir que esses valores "0" correspondem a dados ausentes (NA), os quais foram preenchidos com o valor zero. Iremos substituir esses valores zero por NAs.
+
+```{r}
+require(tidyr)
+rionegro_amazonas_2010_02 <- rionegro_amazonas_2010_02 %>%
+  mutate(
+    level_m = case_when(
+      date == "2010-08-07" ~ NA_real_,
+      date == "2010-12-22" ~ NA_real_,
+      TRUE ~ as.numeric(level_m)
+    ),
+    increase_decrease_cm = case_when(
+      date == "2010-08-07" ~ NA_real_,
+      date == "2010-12-22" ~ NA_real_,
+      TRUE ~ as.numeric(increase_decrease_cm)
+    )
+  )
+```
+
+### Tratamento de Valores Faltantes (NA)
+
+Agora que definimos os valores faltantes, podemos escolher um método para tratá-los. Nesse exemplo, usaremos o Foward-Fill, mas encorajamos você a pesquisar e tentar utilizar outros métodos para aprender diferentes formas de tratamentos de valores faltantes.
+
+```{r}
+require(tidyr)
+
+rionegro_amazonas_2010_02 <- rionegro_amazonas_2010_02 %>%
+  fill(level_m, increase_decrease_cm)
+```
+
+Com os dados tratados, podemos refazer o gráfico e visualizar o nível do Rio Negro.
+
+### Visualização Gráfica do Rio Negro (2010/2)
+
+```{r}
+#| code-fold: true
+require(dplyr)
+require(ggplot2)
+
+# Visualização Gráfica
+rionegro_amazonas_2010_02 %>%
+  ggplot(., aes(x = date, y = level_m)) +
+  geom_line(size = 1L, colour = "#006994") +
+  geom_hline(
+        aes(
+            yintercept = mean(rionegro_amazonas_2010_02$level_m),
+            color = "Média"
+        ),
+        linetype = "dashed",
+        size = 1
+  ) +
+  geom_hline(
+        aes(
+            yintercept = min(rionegro_amazonas_2010_02$level_m),
+            color = "Mínimo"
+        ),
+        linetype = "dotted",
+        size = 1
+  ) +
+  geom_hline(
+        aes(
+            yintercept = max(rionegro_amazonas_2010_02$level_m),
+            color = "Máximo"
+        ),
+        linetype = "dotted",
+        size = 1
+  ) +
+  scale_color_manual(
+        name = "Estatísticas",
+        values = c(
+                   "Média" = "orange",
+                   "Mínimo" = "red",
+                   "Máximo" = "green"
+                  )) +
+  scale_x_date(
+        date_breaks = "1 month"
+  ) +
+  theme_light() +
+  theme(
+        plot.title = element_text(face = "bold", size = 16)
+  ) +
+  labs(
+       x = "Ano",
+       y = "Nível do rio em metros",
+       title = "Nível do Rio Negro (ajustado) do 2º semestre de 2010 (Amazonas)"
+  )
+```
+
+Portanto, é notável que o tratamento desses valores outliers, que foram considerados faltantes fez toda diferença na conclusão sobre os dados do nível do Rio Negro.
+
+

@@ -1,0 +1,9 @@
+project:
+  type: docusaurus
+      
+format: 
+  docusaurus-md:
+    code-fold: false
+  
+execute: 
+  warning: false
