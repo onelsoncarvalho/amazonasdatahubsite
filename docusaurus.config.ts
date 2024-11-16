@@ -6,7 +6,8 @@ import tailwindPlugin from "./plugins/tailwind-config.cjs";
 const config: Config = {
   title: "Amazonas DataHub",
   tagline: "Dados do estado do Amazonas para aplicar Deep Learning",
-  favicon: "img/favicon.ico",
+  // favicon: "img/favicon.ico",
+  favicon: "img/logo_amazonasdatahub.png",
 
   // Set the production url of your site here
   // url: "https://your-docusaurus-site.example.com",
@@ -79,10 +80,10 @@ const config: Config = {
           type: "localeDropdown",
           position: "right"
         },
-        {
-          type: "search",
-          position: "right",
-        },
+        //{
+        //  type: "search",
+        //  position: "right",
+        //},
         {
           href: "https://github.com/facebook/docusaurus",
           label: "GitHub",

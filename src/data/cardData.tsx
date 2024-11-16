@@ -50,7 +50,7 @@ const cardDataBr = [
   }
 ]
 
-import BiologicalIcon from "@site/static/img/icons/dados_biologicos.svg";
+import BiologicalIcon from "@site/static/img/icons/biology_icon.svg";
 import HealthIcon from "@site/static/img/icons/dados_saude.svg";
 import EconomyIcon from "@site/static/img/icons/dados_economia.svg";
 import MeteorologyIcon from "@site/static/img/icons/dados_meteorologicos.svg";
@@ -58,8 +58,8 @@ import SocialScienceIcon from "@site/static/img/icons/dados_ciencias_sociais.svg
 
 const contributeCardDataBr = [
   {
-    IconSvg: <BiologicalIcon className="max-w-full" />,
-    iconUrl: "/img/icons/dados_biologicos.svg",
+    IconSvg: <BiologicalIcon className="max-w-32" />,
+    iconUrl: "/img/icons/biology_icon.svg",
     iconAlt: "Ícone de dados biológicos",
     title: "Dados Biológicos",
     text: "Buscamos dados de pesquisas ou de trabalhos acadêmicos de Biologia que possam ser disponibilizados para esse projeto. Tais dados podem ser: acompanhamento de amostras, classificação de espécies, famílias, reinos, etc, imagens, etc."
