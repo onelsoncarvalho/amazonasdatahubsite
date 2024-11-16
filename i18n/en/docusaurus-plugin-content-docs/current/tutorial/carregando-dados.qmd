@@ -1,7 +1,6 @@
 ---
 title: "Importing Data"
 format: docusaurus-md
-slug: /importing-data
 ---
 
 # Importing Data
