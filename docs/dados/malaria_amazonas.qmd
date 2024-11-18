@@ -1,0 +1,192 @@
+---
+title: "malaria_amazonas"
+format: docusaurus-md
+---
+
+# malaria_amazonas
+
+An integrated dataset of malaria notifications in the state of Amazonas
+
+### Description
+
+This dataset contains medical records of patients who underwent malaria screening tests in the Legal Amazon. The data in this dataset were filtered to include only the cases reported in the state of Amazonas and for patients who reside specifically in the state of Amazonas.
+
+
+### Usage
+
+```{r, eval = FALSE}
+malaria_amazonas
+```
+
+### Format
+
+‘malaria_amazonas’ A data frame with 1098620 rows and 40 columns:
+
+#### notification.state
+
+State of notification
+
+#### notification.rh
+
+Health region of notification
+
+#### notification.county
+
+County of notification
+
+#### infection.country
+
+Probable county where the patient was infected
+
+#### infection.state
+
+Probable state where the patient was infected
+
+#### infection.hr
+
+Probable health region where the patient was infected
+
+#### infection.county
+
+Probable county where the patient was infected
+
+#### home.country
+
+Country of residence of the patient
+
+#### home.state
+
+State of residence of the patient
+
+#### home.hr
+
+Health region of residence of the patient
+
+#### home.county
+
+County of residence of the patient
+
+#### exam.interval
+
+Time interval between notification and examination
+
+#### treatment.interval
+
+Time interval between examination and beginning of treatment
+
+#### notification.interval
+
+Time interval between symptom and notification
+
+#### notification.month
+
+Month in which the notification was recorded
+
+#### notification.year
+
+Year in which the notification was recorded
+
+#### symptom.month
+
+Month in which the patient felt the first symptoms of malaria
+
+#### symptom.year
+
+Year in which the patient felt the first symptoms of malaria
+
+#### exam.month
+
+Month in which the examination was performed
+
+#### exam.year
+
+Year in which the examination was performed
+
+#### treatment.month
+
+Month in which the treatment started
+
+#### treatment.year
+
+Year in which the treatment started
+
+#### migration
+
+Health region of residence different than that of notification
+
+#### autochthonous.case
+
+Health region of infection identical to that of residence
+
+#### exam.result
+
+Result of examination
+
+#### detection.type
+
+Type of detection
+
+#### exam.type
+
+Type of examination
+
+#### symptom
+
+Indicates if the patient felt a symptom
+
+#### hemiparasite
+
+The result of the examination for other hemiparasites
+
+#### previous.treatment
+
+Previous treatment for P. vivax or P.falciparum
+
+#### occupation
+
+Main activity in the last 15 days
+
+#### education.level
+
+Level of education of the patient
+
+#### age
+
+Interval of the age of the patient
+
+#### race
+
+Race/color of the patient
+
+#### gender
+
+Gender of the patient
+
+#### pregnancy
+
+Indicates pregnancy and the gestational age
+
+#### crosses
+
+Indicates the amount of parasitemia in crosses
+
+#### cvl.case
+
+Indicates the existence of cases of canine visceral leishmaniasis
+
+#### scheme
+
+Indicates the treatment scheme employed
+
+#### qty.parasites
+
+Indicates the number of parasites per mm^3
+
+#### month
+
+The month in which this data was observed
+
+### Source
+
+Source information to be provided later
+

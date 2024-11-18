@@ -1,0 +1,13 @@
+---
+title: "Dados"
+format: docusaurus-md
+---
+
+# Documentação dos Dados
+
+| Função | Descrição |
+| :----- |:--------- |
+|[base_manaus](./base_manaus) |Time series with Extreme Values of Limited Range|
+|[malaria_amazonas](./malaria_amazonas)|An integrated dataset of malaria notifications in the state of Amazonas|
+|[pib_trimestral](./pib_trimestral)|Gross Domestic Product - GDP of Amazonas|
+|[rionegro_amazonas](./rionegro_amazonas)|A dataset of the Rio Negro River (Amazonas) level from 2003 to 2023|
