@@ -13,9 +13,9 @@ const Card: FC<ICardNew> = ({ IconSvg, iconUrl, iconAlt, title, text, className 
         <div className="max-w-58">
           {IconSvg}
         </div>
-        <h3 className="uppercase">{title}</h3>
+        <h3 className="uppercase text-[#1A222C]">{title}</h3>
       </div>
-      <p>{text}</p>
+      <p className="text-slate-800">{text}</p>
     </div>
   )
 }

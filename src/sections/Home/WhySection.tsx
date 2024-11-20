@@ -14,10 +14,10 @@ const WhySection = () => {
   ];
 
   return (
-    <section>
-      <Container>
+    <section className="bg-slate-50">
+      <Container className="">
         <div className="flex flex-col justify-center col-span-4 md:col-span-4 lg:col-span-6 gap-4">
-          <h1>
+          <h1 className="text-[#1A222C]">
             <Translate id="whysection.title">
               Por que usar o Amazonas DataHub?
             </Translate>
@@ -41,8 +41,8 @@ const WhySection = () => {
         <div className="flex items-center justify-center col-span-4 md:col-span-4 lg:col-span-6">
           <MachineLearningIcon className="max-w-full max-h-64" title="Machine Learning Illustration" />
         </div>
-      </Container>
-    </section>
+      </Container >
+    </section >
   )
 }
 
