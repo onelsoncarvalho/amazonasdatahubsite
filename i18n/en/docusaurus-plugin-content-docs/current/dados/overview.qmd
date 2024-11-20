@@ -5,6 +5,10 @@ format: docusaurus-md
 
 # Data Documentation
 
+If you haven't installed the `amazonasdatahub`, check the installation page: [amazonasdatahub installation](../instalacao).
+
+Read the documentation of each dataset at the links below.
+
 | Function | Description |
 | :----- |:--------- |
 |[base_manaus](./base_manaus) |Time series with Extreme Values of Limited Range|

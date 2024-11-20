@@ -5,100 +5,99 @@ format: docusaurus-md
 
 # pib_trimestral
 
-Gross Domestic Product - GDP of Amazonas
+Produto Interno Bruto - PIB do Amazonas
 
-### Description
+### Descrição
 
-This database contains information about the Gross Domestic Product (GDP) of the state of Amazonas over the years (from 2010 to 2021). It includes values in R$ 1,000,000.
+Essa base possui dados sobre o Produto Interno Bruto (PIB) do Estado do Amazonas no decorrer dos anos (de 2010 até 2021). Inclui valores em R$ 1,000,000.
 
-
-### Usage
+### Uso
 
 ```{r, eval = FALSE}
 pib_trimestral
 ```
 
-### Format
+### Formato
 
-‘pib_trimestral’ A data frame with 48 rows and 21 columns:
+‘pib_trimestral’ Um data frame com 48 linhas e 21 colunas
 
 #### year
 
-Indicates the year in which the GDP info was collected
+Indica o ano de observação do PIB.
 
 #### quarter
 
-Specifies the quarter of the year
+Especifica o trimestre do ano
 
 #### agriculture
 
-Refers to the economic output from agricultural activities, including cultivation, harvesting, and logistical support after harvest
+Refere-se à produção econômica das atividades agrícolas, incluindo cultivo, colheita e suporte logístico pós-colheita.
 
 #### livestock
 
-Represents the economic contribution from livestock farming, covering meat, dairy production, and related support services
+Representa a contribuição econômica da pecuária, abrangendo a produção de carne, laticínios e serviços de suporte relacionados.
 
 #### forest_fishing_prod
 
-Outputs from forestry (timber and non-timber products), fishing activities and aquaculture (fish farming)
+Produção proveniente da silvicultura (produtos madeireiros e não madeireiros), atividades pesqueiras e aquicultura (criação de peixes).
 
 #### extractive_ind
 
-Extractive industries of natural resources as minearls and oil
+Indústrias extrativas de recursos naturais, como minerais e petróleo.
 
 #### manufacturing_ind
 
-Refers to the transformation of raw materials into finished goods industries
+Refere-se à transformação de matérias-primas em produtos acabados.
 
 #### basic_infrastructure
 
-Encompasses services related to electricity and gas generation, water supply, sewage treatment, and waste management.constructionRepresents economic activities related to building construction.
+Abrange serviços relacionados à geração de eletricidade e gás, abastecimento de água, tratamento de esgoto e gestão de resíduos.
 
 #### vehicle_retail_repair
 
-Includes all commercial activities related to selling goods and services as well as vehicle repair services.
+Inclui todas as atividades comerciais relacionadas à venda de bens e serviços, bem como serviços de reparo de veículos.
 
 #### transport_storage_post
 
-Covers services related to transporting people and goods, storage facilities, and postal services.
+Abrange serviços relacionados ao transporte de pessoas e mercadorias, instalações de armazenamento e serviços postais.
 
 #### accomodation_food
 
-Refers to economic activities in tourism-related sectors such as hotels and restaurants.information_communicationEncompasses sectors dealing with information technology and telecommunications.
+Refere-se às atividades econômicas em setores relacionados ao turismo, como hotéis e restaurantes.
 
 #### financial_activities
 
-Includes banks, financial institutions, insurance companies, and various financial services.
+Inclui bancos, instituições financeiras, companhias de seguros e diversos serviços financeiros.
 
 #### real_state_activities
 
-Refers to transactions involving buying, selling, or renting properties.
+Refere-se às transações envolvendo compra, venda ou aluguel de propriedades.
 
 #### professional_activities
 
-Covers a wide range of specialized professional services including consulting and administrative support.
+Abrange uma ampla gama de serviços profissionais especializados, incluindo consultoria e suporte administrativo.
 
 #### public_admin_defense_health_edu
 
-Represents public sector spending on government administration, national defense, public education, health care services, and social security programs.
+Representa os gastos do setor público com administração governamental, defesa nacional, educação pública, serviços de saúde e programas de seguridade social.
 
 #### private_edu_health
 
-Refers to educational institutions and health care providers operating in the private sector.
+Refere-se a instituições educacionais e provedores de serviços de saúde que operam no setor privado.
 
 #### art_culture_sport
 
-Encompasses activities related to entertainment, cultural events, sports facilities, and other service-oriented sectors.
+Abrange atividades relacionadas ao entretenimento, eventos culturais, instalações esportivas e outros setores orientados a serviços.
 
 #### domestic_services
 
-Includes personal services provided within households such as cleaning or caregiving.
+Inclui serviços pessoais prestados em domicílios, como limpeza ou cuidados pessoais.
 
 #### taxes
 
-Represents taxes levied on goods and services included in GDP calculations.
+Representa os impostos cobrados sobre bens e serviços incluídos nos cálculos do PIB.
 
-### Source
+### Fonte
 
 Scientific Journal of Applied Social and Clinical Science - TIME SERIES ANALYSIS FOR THE QUARTERLY GROSS DOMESTIC PRODUCT OF AMAZONAS
 
