@@ -1,19 +1,19 @@
 ---
-title: "Instalação"
+title: "Installation"
 format: docusaurus-md
 ---
 
-# Instalação
+# Installation
 
-Você pode instalar o `amazonasdatahub` utilizando o `devtools` do R.
-Se você não possuir o `devtools` instalado, instale-o usando:
+You can install `amazonasdatahub` using `devtools` from R.
+If you do not have `devtools` installed, install it using:
 
 ```{r}
 #| eval: false
 install.packages("devtools")
 ```
 
-Após ter instalado o `devtools`, você pode instalar o `amazonadatahub`:
+After the `devtools` successfully installation, you can install `amazonasdatahub`:
 
 ```{r}
 #| title: oi
@@ -23,12 +23,9 @@ library(devtools)
 devtools::install_github("Nelson-DevStack/amazonasdatahub")
 ```
 
-```{python}
-#| eval: false
-print("ola")
-```
+Check the [Tutorial Guide](../tutorial).
 
-
+Read the [Data Documentation](/dados/overview) to learn about the datasets.
 
 
 
