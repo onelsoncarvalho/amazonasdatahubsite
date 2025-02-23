@@ -3,6 +3,7 @@ title: "aids_amazonas"
 format: docusaurus-md
 ---
 
+
 # aids_amazonas
 
 A dataset of AIDS occurrences from 2011 to 2023 in Amazonas
