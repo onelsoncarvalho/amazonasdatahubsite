@@ -9,7 +9,7 @@ See how easily you can create plots from the data available in this package
 library(amazonasdatahub)
 ```
 
-### Visualização de Séries Temporais
+### Time Series Example
 
 Using `dplyr` and `ggplo2` for quick and practical data analysis:
 

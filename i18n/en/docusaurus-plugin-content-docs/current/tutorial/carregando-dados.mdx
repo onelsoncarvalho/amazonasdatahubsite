@@ -9,12 +9,9 @@ format: docusaurus-md
 # Importing Data
 
 To use AmazonasDataHub’s datasets, make sure you already have the
-package installed (see Tutorial - Install). Para usar as bases de dados
-do AmazonasDataHub, primeiramente, garanta que o pacote já esteja
-instalado (veja a aba de Tutorial - Instalação).
+package installed (see Tutorial - Install).
 
-Carregue o pacote usando a função `library()`: Import the package using
-`library()`
+Import the package using `library()`
 
 ```r
 library(amazonasdatahub)
@@ -22,14 +19,12 @@ library(amazonasdatahub)
 
 ## AmazonasDataHub - Datasets
 
-Until now, the `amazonasdatahub` package includes four datasets for you,
+Until now, the `amazonasdatahub` package includes five datasets for you,
 wheter you are a student, statistician, or enthusiast, to analyze and
 apply statistical methods.
 
-Até o momento, o pacote `amazonasdatahub` conta com quatro bases de
-dados para você, estudante, estatístico ou entusiasta, para analisar e
-aplicar métodos estatísticos.
-
+-   aids_amazonas - A dataset of AIDS occurrences from 2011 to 2023 in
+    Amazonas;
 -   base_manaus: Time series with Extreme Values of Limited Range;
 -   malaria_amazonas: An integrated dataset of malaria notifications in
     the state of Amazonas;
@@ -39,21 +34,14 @@ aplicar métodos estatísticos.
 
 As soon as the package is loaded, these datasets can be accessed.
 
-Assim que o pacote é carregado, essas bases de dados já podem ser
-acessadas.
-
 ### Documentation
 
 Each dataset of `amazonasdatahub` is documented, explaining details
 about the dataset and what each variable represents. To view the
 documentation, simply use `?` followed by the dataset name.
 
-Cada base de dados do `amazonasdatahub` é documentada, explicando
-detalhes sobre a base de dados e o que cada variável representa. Para
-ver a documentação, basta utilizar o `?` precedido do nome da base de
-dados.
-
 ```r
+?aids_amazonas
 ?base_manaus
 ?malaria_amazonas
 ?pib_trimestral
@@ -66,9 +54,6 @@ dados.
 
 With `amazonadatahub` installed and the data loaded, you can use the
 datasets simply by declaring their names.
-
-Com o AmazonasDataHub instalado e os dados carregados, você já pode
-utilizar os datasets desse pacote.
 
 ```r
 head(pib_trimestral, 2)
@@ -98,9 +83,6 @@ head(pib_trimestral, 2)
 ### Descriptive Statistics
 
 You can use the `summary` to check the descriptive statistics:
-
-Você pode aplicar a função `summary` para ver as estatísticas
-descritivas desses dados:
 
 ```r
 summary(pib_trimestral)
@@ -157,10 +139,7 @@ The `amazonasdatahub` package includes a dataset called
 `rionegro_amazonas`, which contains data on the water level of the Negro
 River from 2003 to 2023.
 
-O AmazonasDataHub inclui um dataset `rionegro_amazonas`, que possui
-dados do nível do Rio Negro, de 2003 a 2023.
-
-### Dados Preview
+### Data Preview
 
 ```r
 head(rionegro_amazonas)
