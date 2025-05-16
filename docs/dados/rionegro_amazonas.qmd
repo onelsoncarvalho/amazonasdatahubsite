@@ -46,8 +46,6 @@ Ano da medição
 
 Semestre da medição
 
-### Source
-
 ### Fonte
 
 Informações sobre a fonte serão fornecidas posteriormente.
