@@ -68,16 +68,17 @@ const config: Config = {
           customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
-      [
-      '@docusaurus/preset-classic',
-      {
-        gtag: {
-          trackingID: 'G-V8XCSGBSKS',
-          anonymizeIP: true,
-        },
+    ],
+    [
+    '@docusaurus/preset-classic',
+    {
+      gtag: {
+        trackingID: 'G-V8XCSGBSKS',
+        anonymizeIP: true,
       },
+    },
     ],
-    ],
+
   ],
 
   themeConfig: {
