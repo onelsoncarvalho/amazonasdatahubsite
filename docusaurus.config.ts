@@ -34,7 +34,7 @@ const config: Config = {
   },
 
   plugins: [
-    tailwindPlugin
+    tailwindPlugin,
     // Google Analytics Plugin
     [
       '@docusaurus/plugin-google-gtag',
