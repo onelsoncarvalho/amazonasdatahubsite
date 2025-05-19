@@ -58,6 +58,15 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
+
+    // Google Analytics Preset
+     [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-V8XCSGBSKS',
+        anonymizeIP: true,
+      },
+    ],
   ],
 
   themeConfig: {
