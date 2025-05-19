@@ -33,7 +33,18 @@ const config: Config = {
     locales: ["pt-br", "en"],
   },
 
-  plugins: [tailwindPlugin],
+  plugins: [
+    tailwindPlugin,
+    // Google Analytics Plugin
+     [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-V8XCSGBSKS',
+        anonymizeIP: true,
+      },
+    ],
+
+  ],
 
   presets: [
     [
@@ -57,15 +68,6 @@ const config: Config = {
           customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
-    ],
-
-    // Google Analytics Preset
-     [
-      '@docusaurus/plugin-google-gtag',
-      {
-        trackingID: 'G-V8XCSGBSKS',
-        anonymizeIP: true,
-      },
     ],
   ],
 
