@@ -34,16 +34,16 @@ const config: Config = {
   },
 
   plugins: [
-    tailwindPlugin,
+    tailwindPlugin
     // Google Analytics Plugin
-    [
-      '@docusaurus/plugin-google-gtag',
-      {
-        trackingID: 'G-V8XCSGBSKS',
-        anonymizeIP: true,
-      },
-    ],
-
+    // [
+    //   '@docusaurus/plugin-google-gtag',
+    //   {
+    //     trackingID: 'G-V8XCSGBSKS',
+    //     anonymizeIP: true,
+    //   },
+    // ],
+    //
   ],
 
   presets: [
