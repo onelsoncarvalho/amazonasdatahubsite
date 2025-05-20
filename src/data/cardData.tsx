@@ -25,14 +25,14 @@ const cardDataBr = [
     iconUrl: "/img/icons/reg_linear.svg",
     iconAlt: "Ícone de regressão linear",
     title: "Regressão Linear",
-    text: "Para você que quer aprender sobre Regressão Linear, e aplicar métodos de Deep Learning, esse pacote do R é essencial para você."
+    text: "Para você que deseja aprender sobre Regressão Linear, e aplicar métodos de Deep Learning, esse pacote do R é essencial para você."
   },
   {
     IconSvg: <RegLogisticaIcon className="max-h-12" />,
     iconUrl: "/img/icons/reg_logistica.svg",
     iconAlt: "Ícone de Regressão Logística",
     title: "Regressão Logística",
-    text: "Veja e faça análises para predizer a classificação de um determinado conjunto de dados desse pacote."
+    text: "Veja e faça análises para realizar classificações nos conjuntos de dados desse pacote."
   },
   {
     IconSvg: <SerieTempIcon className="max-h-12" />,
