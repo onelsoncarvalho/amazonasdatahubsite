@@ -106,7 +106,7 @@ const config: Config = {
         //  position: "right",
         //},
         {
-          href: "https://github.com/Nelson-DevStack/amazonasdatahubsite",
+          href: "https://github.com/Nelson-DevStack/amazonasdatahub",
           label: "GitHub",
           position: "right",
         },
