@@ -18,21 +18,21 @@ const cardDataBr = [
     iconUrl: "@site/static/img/icons/documentacao.svg",
     iconAlt: "Ícone de Documentação",
     title: "Dados Documentados",
-    text: "Cada conjunto de dados desse pacote é documentado para explicar o que é cada variável e o que o dataset representa."
+    text: "Cada conjunto de dados é documentado para explicar sobre o contexto e sobre o que cada variável representa."
   },
   {
     IconSvg: <RegLinearIcon className="max-h-12" />,
     iconUrl: "/img/icons/reg_linear.svg",
     iconAlt: "Ícone de regressão linear",
     title: "Regressão Linear",
-    text: "Para você que deseja aprender sobre Regressão Linear, e aplicar métodos de Deep Learning, esse pacote do R é essencial para você."
+    text: "Com os dados, você pode aplicar e praticar Regressão Linear, além da possiblidade de aplicar métodos de Deep Learning."
   },
   {
     IconSvg: <RegLogisticaIcon className="max-h-12" />,
     iconUrl: "/img/icons/reg_logistica.svg",
     iconAlt: "Ícone de Regressão Logística",
     title: "Regressão Logística",
-    text: "Veja e faça análises para realizar classificações nos conjuntos de dados desse pacote."
+    text: "Com essa técnica, é possível realizar a classificação de variáveis dicotômicas nos dados que esse pacote oferece."
   },
   {
     IconSvg: <SerieTempIcon className="max-h-12" />,
@@ -62,35 +62,35 @@ const contributeCardDataBr = [
     iconUrl: "/img/icons/biology_icon.svg",
     iconAlt: "Ícone de dados biológicos",
     title: "Dados Biológicos",
-    text: "Buscamos dados de pesquisas ou de trabalhos acadêmicos de Biologia que possam ser disponibilizados para esse projeto. Tais dados podem ser: acompanhamento de amostras, classificação de espécies, famílias, reinos, etc, imagens, etc."
+    text: "Aceitamos dados de pesquisas ou de trabalhos acadêmicos de Biologia que possam ser disponibilizados para esse projeto. Tais dados podem ser: acompanhamento de amostras, classificação de espécies, famílias, reinos, etc."
   },
   {
     IconSvg: <HealthIcon className="max-w-32" />,
     iconUrl: "/img/icons/dados_saude.svg",
     iconAlt: "Ícone de dados de saúde",
     title: "Dados de Saúde e Farmácia",
-    text: "Procuramos dados de acompanhamento de pacientes, sejam de Educação Física, Fisioterapia, Medicina, além de dados epidemiológicos, dados de acompanhamento de medicamentos, evolução de medicamentos, dados de testes de medicamentos e tratamentos."
+    text: "Procuramos dados de acompanhamento de pacientes, sejam de Educação Física, Fisioterapia, Medicina, além de dados epidemiológicos, dados de acompanhamento de medicamentos, evolução e testes de medicamentos e de tratamentos."
   },
   {
     IconSvg: <EconomyIcon className="max-w-32" />,
     iconUrl: "/img/icons/dados_economia.svg",
     iconAlt: "Ícone de dados de economia",
     title: "Dados de Economia",
-    text: "Buscamos dados com preços, tanto de ações, quanto imóveis, consumo, como também dados de renda, crédito, e churn."
+    text: "Buscamos dados com preços de produtos, indicadores econômicos, indicadores agropecuários, valores de imóveis, consumo, assim como dados de renda, crédito, e churn."
   },
   {
     IconSvg: <MeteorologyIcon className="max-w-32" />,
     iconUrl: "/img/icons/dados_meteorologicos.svg",
     iconAlt: "Ícone de dados meteorológicos",
     title: "Dados Meteorológicos",
-    text: "Aceitamos dados meteorológicos, principalmente sobre regime pluviométricos, temperatura média, horas, luz, precipitação, vento, umidade relativa, variações sazonais, etc."
+    text: "Aceitamos dados meteorológicos, principalmente sobre regime pluviométricos, temperatura média, luz, precipitação, vento, umidade relativa, variações sazonais, etc."
   },
   {
     IconSvg: <SocialScienceIcon className="max-w-32" />,
     iconUrl: "/img/icons/dados_ciencias_sociais.svg",
     iconAlt: "Ícone de dados de ciências sociais",
     title: "Dados de Ciências Sociais",
-    text: "Buscamos dados demográficos, sobre acesso a educação, pesquisas com opiniões, dados sobre hábito e consumo, dados de desempenho pedagógico e acadêmico, dados sobre evasão escolar, etc."
+    text: "Buscamos dados demográficos, sobre acesso a educação, indidacores sociais, pesquisas com opiniões, dados sobre hábito e consumo, dados de desempenho pedagógico e acadêmico, dados sobre evasão escolar, etc."
   }
 ]
 
@@ -116,14 +116,16 @@ const cardDataEn = [
     iconUrl: RegLinearIcon,
     iconAlt: "Linear regression icon",
     title: "Linear Regression",
-    text: "For those who want to learn about Linear Regression and apply Deep Learning methods, this R package is essential for you."
+    // text: "For those who want to learn about Linear Regression and apply Deep Learning methods, this R package is essential for you."
+    text: "With our datasets, you can apply and practice Linear Regression, in addition to the possibility of applying Deep Learning methods."
   },
   {
     IconSvg: <RegLogisticaIcon className="max-h-12" />,
     iconUrl: RegLogisticaIcon,
     iconAlt: "Logistic regression icon",
     title: "Logistic Regression",
-    text: "See and perform analysis to predict the classification of a given dataset in this package."
+    // text: "See and perform analysis to predict the classification of a given dataset in this package."
+    text: "With this method, it is possible to classify a binary variable from some datasets from this package"
   },
   {
     IconSvg: <SerieTempIcon className="max-h-12" />,
@@ -147,7 +149,7 @@ const contributeCardDataEn = [
     iconUrl: "/img/icons/dados_biologicos.svg",
     iconAlt: "Biological data icon",
     title: "Biological Data",
-    text: "We are looking for research or academic work data in Biology that can be made available for this project. Such data can include: sample tracking, species classification, families, kingdoms, images, etc."
+    text: "We are looking for research or academic work data in Biology that can be made available for this project. Such data can include: sample tracking, species classification, families, kingdoms, etc."
   },
   {
     IconSvg: <HealthIcon className="max-w-32" />,
@@ -161,21 +163,21 @@ const contributeCardDataEn = [
     iconUrl: "/img/icons/dados_economia.svg",
     iconAlt: "Economics data icon",
     title: "Economic Data",
-    text: "We are looking for data on prices, including stocks, real estate, consumption, as well as income, credit, and churn data."
+    text: "We are looking for data of product prices, economic indicators, agricultural indicators, real estate, consumption, as well as income, credit, and churn data."
   },
   {
     IconSvg: <MeteorologyIcon className="max-w-32" />,
     iconUrl: "/img/icons/dados_meteorologicos.svg",
     iconAlt: "Meteorological data icon",
     title: "Meteorological Data",
-    text: "We accept meteorological data, especially regarding rainfall regimes, average temperature, hours of sunlight, precipitation, wind, relative humidity, seasonal variations, etc."
+    text: "We accept meteorological data, especially regarding rainfall regimes, average temperature, precipitation, wind, relative humidity, seasonal variations, etc."
   },
   {
     IconSvg: <SocialScienceIcon className="max-w-32" />,
     iconUrl: "/img/icons/dados_ciencias_sociais.svg",
     iconAlt: "Social sciences data icon",
     title: "Social Sciences Data",
-    text: "We are looking for demographic data, data on access to education, opinion surveys, consumption habits, data on academic performance and school dropout rates, etc."
+    text: "We are looking for demographic data, data on access to education, social indicators, opinion surveys, consumption habits, data on academic performance and school dropout rates, etc."
   }
 ];
 
