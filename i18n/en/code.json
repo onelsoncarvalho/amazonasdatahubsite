@@ -15,16 +15,16 @@
     "message": "Knowledge at your fingertips"
   },
   "home.header.title": {
-    "message": "Amazonas DataHub: data from Amazonas state (Brazil) to apply Deep Learning"
+    "message": "Amazonas DataHub: data from Amazonas state (Brazil) to apply statistical methods"
   },
   "home.header.subtitle": {
-    "message": "With this open-source R package, you will have access to various datasets to apply Deep Learning and statistical methods."
+    "message": "With this open-source R package, you will have access to various datasets to apply statistical methods, Machine Learning and Deep Learning."
   },
   "studysection.title": {
     "message": "Study and Explore data from Amazonas"
   },
   "studysection.description": {
-    "message": "With this package, you can perform analyses, find trends, patterns, and much more using the power of Statistics."
+    "message": "Our datasets of various types bring a range of possibilites and applications"
   },
   "whysection.item.plottableData": {
     "message": "Plottable Data"
@@ -48,7 +48,7 @@
     "message": "Why use Amazonas DataHub?"
   },
   "whysection.description": {
-    "message": "This R package will provide you with various datasets that will be useful both for learning Exploratory Data Analysis and for applying Machine Learning and Deep Learning methods."
+    "message": "The datasets available in this package will be useful both in learning and in application of concepts related to Statistics."
   },
   "theme.ErrorPageContent.title": {
     "message": "This page crashed.",

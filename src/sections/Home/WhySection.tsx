@@ -24,7 +24,8 @@ const WhySection = () => {
           </h1>
           <p className="text-slate-800 leading-tight text-xl">
             <Translate id="whysection.description">
-              Esse pacote do R vai te oferecer diversas bases de dados que serão úteis tanto no aprendizado de Análise Exploratória de Dados, quanto na aplicação de métodos de Machine Learning (Aprendizado de Máquina) e Deep Learning.
+              Diversas bases de dados são disponibilizadas nesse pacote, e serão úteis tanto no aprendizado, quanto em aplicações de conceitos relacionados à Estatística.
+              {/* Esse pacote do R vai te oferecer diversas bases de dados que serão úteis tanto no aprendizado de Análise Exploratória de Dados, quanto na aplicação de métodos de Machine Learning (Aprendizado de Máquina) e Deep Learning. */}
             </Translate>
           </p>
 
