@@ -48,6 +48,7 @@ pib_trimestral %>%
 
 require(dplyr)
 require(ggplot2)
+require(gridExtra)
 
 # Filtering dates for the second half of 2010
 rionegro_amazonas_2010_02 <- rionegro_amazonas %>%
@@ -130,7 +131,18 @@ boxplot2 <- rionegro_amazonas_2010_02 %>%
     y = "Increase or Decrease (cm)"
   )
 
-gridExtra::grid.arrange(boxplot1, boxplot2, ncol = 2)
+boxplot3 <- rionegro_amazonas %>%
+  ggplot(aes(x = year, y = level_m, group = year)) +
+  stat_boxplot(geom = "errorbar") +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(
+       x = "Year",
+       y = "Level of water (meters)"
+  )
+
+
+gridExtra::grid.arrange(boxplot3, ncol = 1)
 ```
 
 
@@ -177,7 +189,7 @@ With the processed data, we can recreate the plot and visualize the level of the
 require(dplyr)
 require(ggplot2)
 
-# Visualização Gráfica
+# Graphical Visualization
 rionegro_amazonas_2010_02 %>%
   ggplot(., aes(x = date, y = level_m)) +
   geom_line(size = 1L, colour = "#006994") +
