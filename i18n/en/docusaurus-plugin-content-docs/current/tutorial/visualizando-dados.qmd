@@ -41,8 +41,8 @@ pib_trimestral %>%
 ```
 
 
-#### Rio Negro: water level
 
+#### Rio Negro: water level
 ```{r}
 #| code-fold: true
 
@@ -97,7 +97,7 @@ rionegro_amazonas_2010_02 %>%
         plot.title = element_text(face = "bold", size = 16)
   ) +
   labs(
-       x = "Ano",
+       x = "Year",
        y = "Water level (m)",
        title = "Rio Negro: water level (second half of 2010)"
   )
