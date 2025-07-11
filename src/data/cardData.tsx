@@ -69,7 +69,7 @@ const contributeCardDataBr = [
     iconUrl: "/img/icons/dados_saude.svg",
     iconAlt: "Ícone de dados de saúde",
     title: "Dados de Saúde e Farmácia",
-    text: "Procuramos dados de acompanhamento de pacientes, sejam de Educação Física, Fisioterapia, Medicina, além de dados epidemiológicos, dados de acompanhamento de medicamentos, evolução e testes de medicamentos e de tratamentos."
+    text: "Procuramos dados de acompanhamento de pacientes, sejam de Educação Física, Fisioterapia, Medicina, dados epidemiológicos, dados de acompanhamento de medicamentos, evolução, testes e tratamentos."
   },
   {
     IconSvg: <EconomyIcon className="max-w-32" />,
@@ -83,7 +83,7 @@ const contributeCardDataBr = [
     iconUrl: "/img/icons/dados_meteorologicos.svg",
     iconAlt: "Ícone de dados meteorológicos",
     title: "Dados Meteorológicos",
-    text: "Aceitamos dados meteorológicos, principalmente sobre regime pluviométricos, temperatura média, luz, precipitação, vento, umidade relativa, variações sazonais, etc."
+    text: "Aceitamos dados meteorológicos, principalmente sobre regime pluviométricos, temperatura média, precipitação, vento, umidade relativa, etc."
   },
   {
     IconSvg: <SocialScienceIcon className="max-w-32" />,
@@ -170,7 +170,7 @@ const contributeCardDataEn = [
     iconUrl: "/img/icons/dados_meteorologicos.svg",
     iconAlt: "Meteorological data icon",
     title: "Meteorological Data",
-    text: "We accept meteorological data, especially regarding rainfall regimes, average temperature, precipitation, wind, relative humidity, seasonal variations, etc."
+    text: "We accept meteorological data, especially regarding rainfall regimes, average temperature, precipitation, wind, relative humidity, etc."
   },
   {
     IconSvg: <SocialScienceIcon className="max-w-32" />,
