@@ -1,9 +1,9 @@
 ---
-title: "base_manaus"
+title: "humidity_manaus"
 format: docusaurus-md
 ---
 
-# base_manaus
+# humidity_manaus
 
 Séries temporais com valores extremos de intervalo limitado
 
@@ -15,12 +15,12 @@ Uma base de dados de séries temporais que consiste no mínimo de umidade relati
 ### Uso
 
 ```{r, eval = FALSE}
-base_manaus
+humidity_manaus
 ```
 
 ### Formato
 
-‘base_manaus’ Uma tibble com 144 linhas e 5 colunas.
+‘humidity_manaus’ Uma tibble com 144 linhas e 5 colunas.
 
 #### year
 

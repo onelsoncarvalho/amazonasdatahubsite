@@ -9,7 +9,6 @@ format: docusaurus-md
 See how easily you can create plots from the data available in this
 package
 
-
 ```r
 library(amazonasdatahub)
 ```
@@ -19,7 +18,6 @@ library(amazonasdatahub)
 Using `dplyr` and `ggplo2` for quick and practical data analysis:
 
 #### Quarterly GDP of Amazonas
-
 
 ```r
 require(dplyr)
@@ -130,7 +128,6 @@ We can conclude that these “0” values correspond to missing data (NAs),
 which were filled with a zero value. We will replace these zero values
 with NAs.
 
-
 ```r
 require(tidyr)
 rionegro_amazonas_2010_02 <- rionegro_amazonas_2010_02 %>%
@@ -157,7 +154,6 @@ handling missing values. With the cleaned data, we can remake the graph
 and visualize the river level. Thus, it is evident that handling these
 outlier values, which were considered missing, made a big difference in
 the conclusions about the Rio Negro’s water level data.
-
 
 ```r
 require(tidyr)

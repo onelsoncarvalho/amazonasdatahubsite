@@ -8,7 +8,6 @@ format: docusaurus-md
 
 Veja como facilmente criar gráficos dos dados disponíveis nesse pacote.
 
-
 ```r
 library(amazonasdatahub)
 ```
@@ -19,7 +18,6 @@ Usando o `dplyr` e o `ggplot2` para fazer análises de forma prática e
 rápida:
 
 #### PIB Trimestral do Amazonas
-
 
 ```r
 require(dplyr)
@@ -131,7 +129,6 @@ Podemos concluir que esses valores “0” correspondem a dados ausentes
 (NA), os quais foram preenchidos com o valor zero. Iremos substituir
 esses valores zero por NAs.
 
-
 ```r
 require(tidyr)
 rionegro_amazonas_2010_02 <- rionegro_amazonas_2010_02 %>%
@@ -155,7 +152,6 @@ Agora que definimos os valores faltantes, podemos escolher um método
 para tratá-los. Nesse exemplo, usaremos o Foward-Fill, mas encorajamos
 você a pesquisar e tentar utilizar outros métodos para aprender
 diferentes formas de tratamentos de valores faltantes.
-
 
 ```r
 require(tidyr)
