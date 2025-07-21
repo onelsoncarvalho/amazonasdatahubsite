@@ -15,7 +15,7 @@ const HomepageHeader = () => {
           </h1>
           <p className="text-slate-300 leading-tight text-xl">
             <Translate id="home.header.subtitle">
-              Com esse pacote de código aberto do R, você vai terá acesso a diversas bases de dados do Amazonas para aplicar métodos estatísticos, Deep Learning (Aprendizado Profundo) e Machine Learning (Aprendizado de Máquina).
+              Com esse pacote de código aberto do R, você terá acesso a diversas bases de dados do Amazonas para aplicar métodos estatísticos, Deep Learning (Aprendizado Profundo) e Machine Learning (Aprendizado de Máquina).
             </Translate>
           </p>
           <div className="flex gap-4">
