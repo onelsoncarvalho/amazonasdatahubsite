@@ -1,5 +1,6 @@
 ---
 title: "Visualização e Análise dos dados"
+#format: html
 format: docusaurus-md
 ---
 
@@ -9,12 +10,99 @@ Veja como facilmente criar gráficos dos dados disponíveis nesse pacote.
 library(amazonasdatahub)
 ```
 
-### Visualização de Séries Temporais
+# Tutoriais das bases de dados
 
-Usando o `dplyr` e o `ggplot2` para fazer análises de forma prática e rápida:
+Para cada base de dados, você pode verificar a documentação correspondente usando um ```?``` (ponto de interrogação) antes do nome da base de dados.
+
+```{r}
+?agriculture_idam
+?aids_amazonas
+?humidity_manaus
+?malaria_amazonas
+?pib_trimestral
+?rionegro_amazonas
+?school_read_levels
+```
 
 
-#### PIB Trimestral do Amazonas
+## Gráfico de Dispersão entre Área plantada e Área colhida de produção de Mandioca
+
+A base de dados ```agriculture_idam``` fornece dados de produção agrícola do Amazonas. Podemos visualizar a dispersão da área plantada e da área colhida de diferentes produções, mas para esse exemplo, usaremos dados de produção de mandioca.
+
+Para plotar um gráfico de dispersão simples no R, sem utilizar outros pacotes, utilizaremos a função ```plot```.
+
+```{r}
+# Filtrando dados
+mandioca_prod <- agriculture_idam[agriculture_idam$cultivation == "Mandioca", ]
+
+# Plotando o grafico
+plot(
+  mandioca_prod$planted,
+  mandioca_prod$harvested,
+  xlab = "Área plantada (hectare)",
+  ylab = "Área colhida (hectare)",
+  main = "Produção de mandioca no Amazonas",
+  sub = "Área plantada x Área colhida"
+)
+```
+
+## Série temporal da contagem de casos de AIDS em Manaus
+
+A base de dados ```aids_amazonas``` fornece dados das ocorrências de AIDS nos municípios do Amazonas.
+
+Uma das análises que podem ser feitas é: verificar a série temporal da contagem de casos filtrado de determinado município, onde os casos são agrupados pelo sexo do indivíduo observado. Para fazer isso, utilizaremos os pacotes ```dplyr``` para estruturar os dados, e o ```ggplot``` para fazer o gráfico e customizá-lo.
+
+```{r}
+# install.packages(c("dplyr", "ggplot2"))
+require(dplyr)
+require(ggplot2)
+
+# Filtrando dados, agrupando e plotando:
+aids_amazonas %>%
+  filter(name_muni == "Manaus") %>%
+  group_by(gender) %>%
+  ggplot(aes(x = year, y = cases, group = gender, color = gender)) +
+  geom_line() +
+  scale_color_manual(values = c("blue", "red")) +
+  theme_minimal() +
+  labs(
+    title = "Contagem de casos de AIDS em Manaus (2011-2023)",
+    x = "Ano",
+    y = "Contagem",
+    color = "Gênero"
+  )
+```
+
+## Série temporal da umidade relativa de Manaus (2010 - 2020)
+
+Com o conjunto de dados ```humidity_manaus```, que reune dados de umidade relativa observados na cidade de Manaus de janeiro de 2009 a dezembro de 2020, podemos verificar séries temporais, e dentre elas, a da umidade relativa durante esse intervalo de tempo.
+
+Usando ```dplyr```, podemos criar uma coluna de data, que será composta pelos dados de mês e ano, e com o ```ggplot2```, podemos criar o gráfico.
+
+```{r}
+# install.packages(c("dplyr", "ggplot2"))
+require(dplyr)
+require(ggplot2)
+
+# Criando variavel de data unindo ano e mes, e em seguida,
+# plotando o grafico
+humidity_manaus %>%
+  mutate(date = as.Date(paste0(year, "-", month, "-","01"))) %>%
+  ggplot(aes(x = date, y = rh)) +
+  geom_line() +
+  theme_minimal() +
+  labs(
+    title = "Umidade Relativa de Manaus (2010 - 2020)",
+    x = "Data",
+    y = "Umidade Relativa"
+  )
+```
+
+## Série temporal do PIB trimestral do Amazonas
+
+Com os dados de ```pib_trimestral```, podemos realizar análises a respeito dos padrões observados na distribuição de dados pelo intervalo observado (2010 a 2021).
+
+Utilizando ```dplyr```, podemos selecionar as variáveis de interesse, e com o ```ggplot2```, criaremos um gráfico de linha. Esse exemplo mostrará essa aplicação, além de customizações mais avançadas, incluindo cores, formatação de fonte do título e tipos de linha.
 
 ```{r}
 require(dplyr)
@@ -23,7 +111,7 @@ require(ggplot2)
 pib_trimestral %>%
   select(year, taxes) %>%
   ggplot(., aes(x = year, y = taxes)) +
-  geom_line(size = 1L, colour = "#cb181d") +
+  geom_line(linewidth = 1L, colour = "#cb181d") +
   geom_hline(
         yintercept = mean(pib_trimestral$taxes),
         linetype = "dashed",
@@ -41,8 +129,25 @@ pib_trimestral %>%
   )
 ```
 
+## Boxplots do nível de água (em metros) do Rio Negro (Amazonas)
 
-#### Nível do Rio Negro
+Com os dados do nível de água e ano do ```rionegro_amazonas```, uma das análises que podem ser feitas é a dos boxplots no decorrer dos anos.
+
+Utilizaremos o ```ggplot2``` para fazer esse gráfico.
+
+```{r}
+require(ggplot2)
+
+rionegro_amazonas %>%
+  ggplot(aes(x = year, y = level_m, group = year)) +
+  stat_boxplot(geom = "errorbar") +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(
+    x = "Ano",
+    y = "Nível do rio (m)"
+  )
+```
 
 ```{r}
 #| code-fold: true
@@ -100,52 +205,15 @@ rionegro_amazonas_2010_02 %>%
   labs(
        x = "Ano",
        y = "Nível do rio em metros",
-       title = "Nível do Rio Negro do 2º semestre de 2010 (Amazonas)"
+       title = "Nível do Rio Negro do 2º semestre de 2010"
   )
 ```
 
-## Faça análises detalhadas
+### Dados faltantes e outliers
 
 Parte do trabalho do Estatístico é identificar e encontrar certos erros e incoerências nos dados. Vejamos que o gráfico acima mostra que o nível do Rio Negro em metros esteve em 0. Isso é estranho e incomum, pois indicaria que o rio secou totalmente.
 
-Podemos plotar os gráficos do tipo boxplot para termos noções dos valores outliers.
-
-```{r}
-#| echo: false
-boxplot1 <- rionegro_amazonas_2010_02 %>%
-  ggplot(aes(x = date, y = level_m)) +
-  theme_minimal() +
-  geom_boxplot() +
-  geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 0.5) +
-  labs(
-    x = "Mês",
-    y = "Nível do Rio (m)"
-  )
-
-boxplot2 <- rionegro_amazonas_2010_02 %>%
-  ggplot(aes(x = date, y = increase_decrease_cm)) +
-  theme_minimal() +
-  geom_boxplot() +
-  geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 0.5) +
-  labs(
-    x = "Mês",
-    y = "Aumento ou Diminuição (cm)"
-  )
-
-boxplot3 <- rionegro_amazonas %>%
-  ggplot(aes(x = year, y = level_m, group = year)) +
-  stat_boxplot(geom = "errorbar") +
-  geom_boxplot() +
-  theme_minimal() +
-  labs(
-    x = "Ano",
-    y = "Nível do Rio (m)"
-  )
-
-gridExtra::grid.arrange(boxplot3, ncol = 1)
-```
-
-Podemos concluir que esses valores "0" correspondem a dados ausentes (NA), os quais foram preenchidos com o valor zero. Iremos substituir esses valores zero por NAs.
+Podemos concluir que esses valores "0", vistos no gráfico dos Boxplots, correspondem a dados ausentes (NA), os quais foram preenchidos com o valor zero. Iremos substituir esses valores zero por NAs.
 
 ```{r}
 require(tidyr)
@@ -229,10 +297,13 @@ rionegro_amazonas_2010_02 %>%
   labs(
        x = "Ano",
        y = "Nível do rio em metros",
-       title = "Nível do Rio Negro (ajustado) do 2º semestre de 2010 (Amazonas)"
+       title = "Nível do Rio Negro (ajustado) do 2º semestre de 2010"
   )
 ```
 
 Portanto, é notável que o tratamento desses valores outliers, que foram considerados faltantes fez toda diferença na conclusão sobre os dados do nível do Rio Negro.
+
+
+
 
 
