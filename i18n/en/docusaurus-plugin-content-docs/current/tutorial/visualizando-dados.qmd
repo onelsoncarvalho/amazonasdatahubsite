@@ -23,7 +23,7 @@ For each dataset, you can check the documentation using ```?``` before the datas
 ?school_read_levels
 ```
 
-## Scatter plot
+## Scatter plot of planted area and harvested area from cassava production
 
 The dataset ```agriculture_idam``` provides crop production data from Amazonas. We can make a scatter plot of planted area and harvested area of filtered productions, In this example, we will use cassava production.
 
