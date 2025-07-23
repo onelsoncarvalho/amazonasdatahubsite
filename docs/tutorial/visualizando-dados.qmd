@@ -154,7 +154,6 @@ rionegro_amazonas %>%
 
 require(dplyr)
 require(ggplot2)
-require(gridExtra)
 
 # Filtrando datas para o segundo semestre de 2010
 rionegro_amazonas_2010_02 <- rionegro_amazonas %>%
