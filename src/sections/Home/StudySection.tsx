@@ -98,7 +98,7 @@ const StudySection = () => {
             </div>
           </div>
 
-          <CTAButtons className="mt-8" />
+          <CTAButtons className="mt-8 md:mt-16" />
         </div>
       </Container>
     </section>
