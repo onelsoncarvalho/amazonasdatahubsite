@@ -66,10 +66,10 @@ const StudySection = () => {
             </Translate>
           </p>
 
-          <div className="flex flex-col lg:flex-row gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div className="flex flex-col items-center">
               <div className="lg:h-1/2">
-                <img src={require(`@site/static/img/${imageName}`).default} className="w-full rounded-sm mb-10" alt="Código para gerar o gráfico de dispersão da Produção de Mandioca no Amazonas, onde verifica-se a relação da área plantada com a área colhida" />
+                <img src={require(`@site/static/img/${imageName}`).default} className="w-full rounded-sm mb-10 max-w-md lg:max-w-full" alt="Código para gerar o gráfico de dispersão da Produção de Mandioca no Amazonas, onde verifica-se a relação da área plantada com a área colhida" />
               </div>
 
           
@@ -107,7 +107,7 @@ const StudySection = () => {
 
             <div className="flex flex-col items-center">
               <div className="lg:h-1/2">
-                <img src={require(`@site/static/img/${imageName2}`).default} className="w-full h-fit rounded-sm mb-10" alt="Código para gerar o gráfico da Série Temporal da contagem de casos de AIDS em Manaus, de 2011 a 2023" />
+                <img src={require(`@site/static/img/${imageName2}`).default} className="w-full h-fit rounded-sm mb-10 max-w-md lg:max-w-full" alt="Código para gerar o gráfico da Série Temporal da contagem de casos de AIDS em Manaus, de 2011 a 2023" />
               </div>
               
               <div className="w-full h-auto lg:h-1/2">
