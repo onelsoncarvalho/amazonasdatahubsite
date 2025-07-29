@@ -4,19 +4,15 @@
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Tutorial - Básico": {
-    "message": "Tutorial - Basics",
+    "message": "Tutorial - Básico",
     "description": "The label for category Tutorial - Básico in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Tutorial - Básico.link.generated-index.description": {
-    "message": "In this tutorial, you'll learn how to use AmazonasDatahub to improve your statistical analysis.",
+    "message": "Nesse tutorial, você vai aprender a usar o AmazonasDataHub e melhorar suas análises estatísticas.",
     "description": "The generated-index page description for category Tutorial - Básico in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Dados": {
-    "message": "Data",
-    "description": "The label for category Dados - Visão Geral in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Datasets": {
-    "message": "Datasets",
-    "description": "The label for category Datasets in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Bases de Dados": {
+    "message": "Bases de Dados",
+    "description": "The label for category Bases de Dados in sidebar tutorialSidebar"
   }
 }

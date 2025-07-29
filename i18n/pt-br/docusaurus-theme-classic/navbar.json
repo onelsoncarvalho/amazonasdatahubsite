@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "Amazonas DataHub",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Logo do Amazonas DataHub",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Documentação": {
+    "message": "Documentação",
+    "description": "Navbar item with label Documentação"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

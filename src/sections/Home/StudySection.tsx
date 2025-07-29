@@ -1,4 +1,5 @@
 import Translate from "@docusaurus/Translate";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Container from "@site/src/components/Container";
 import CTAButtons from "@site/src/components/CTA";
 import dados from "../../data/idam_mandioca.json";
@@ -20,6 +21,35 @@ import {
 const StudySection = () => {
 
   // <img src={require("@site/static/img/study_plot.png").default} className="rounded-lg" alt="Gráfico de Série Temporal do Nível do Rio Negro" />
+  const { i18n } = useDocusaurusContext();
+  const plot1BrData = {
+    x: 'Área plantada',
+    y: 'Área colhida'
+  }
+  const plot1EnData = {
+    x: 'Planted area',
+    y: 'Harvested area'
+  };
+
+  const plot2EnData = {
+    x: 'Year',
+    y: 'Case count',
+    female: 'Female',
+    male: 'Male',
+  };
+  const plot2BrData = {
+    x: 'Ano',
+    y: 'Contagem de casos',
+    female: 'Feminino',
+    male: 'Male',
+  };
+
+  const plot1Data = i18n.currentLocale === "en" ? plot1EnData : plot1BrData;
+  const plot2Data = i18n.currentLocale === "en" ? plot2EnData : plot2BrData;
+
+  const imageName = i18n.currentLocale === "en" ? "code_cassava.png" : "code.png";
+  const imageName2 = i18n.currentLocale === "en" ? "code_aids.png" : "codigo_grafico_aids.png";
+  
   return (
     <section className="bg-[#1C2430] bg-hero-light bg-contain bg-no-repeat bg-top">
       <Container>
@@ -39,14 +69,22 @@ const StudySection = () => {
           <div className="flex flex-col lg:flex-row gap-10">
             <div className="flex flex-col items-center">
               <div className="lg:h-1/2">
-                <img src={require("@site/static/img/code.png").default} className="w-full rounded-sm mb-10" alt="Código para gerar o gráfico de dispersão da Produção de Mandioca no Amazonas, onde verifica-se a relação da área plantada com a área colhida" />
+                <img src={require(`@site/static/img/${imageName}`).default} className="w-full rounded-sm mb-10" alt="Código para gerar o gráfico de dispersão da Produção de Mandioca no Amazonas, onde verifica-se a relação da área plantada com a área colhida" />
               </div>
 
           
               <div className="w-full h-auto lg:h-1/2">
                 <div>
-                  <h3 className="text-center text-slate-50 mb-0">Produção de Mandioca no Amazonas</h3>
-                  <p className="text-slate-200 text-center">Área plantada x Área colhida</p>
+                  <h3 className="text-center text-slate-50 mb-0">
+                    <Translate id="study.plot1Title">
+                    Produção de Mandioca no Amazonas
+                    </Translate>
+                  </h3>
+                  <p className="text-slate-200 text-center">
+                    <Translate id="study.plot1Subtitle">
+                    Área plantada x Área colhida
+                    </Translate>
+                  </p>
                 </div>
               
                 <ResponsiveContainer width="100%" height={400}>
@@ -55,10 +93,10 @@ const StudySection = () => {
                   >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis type="number" dataKey="planted" name="Área plantada" unit="ha" stroke="#FAFAFA">
-                      <Label value="Área plantada" offset={5} position="bottom" fill="#0BEBAF"/>
+                      <Label value={plot1Data.x} offset={5} position="bottom" fill="#0BEBAF"/>
                     </XAxis>
                     <YAxis type="number" dataKey="harvested" name="Área colhida" unit="ha" stroke="#FAFAFA">
-                      <Label value="Área colhida" offset={10} position="left" angle={-90} fill="#0BEBAF" style={{ textAnchor: 'middle' }} />
+                      <Label value={plot1Data.y} offset={10} position="left" angle={-90} fill="#0BEBAF" style={{ textAnchor: 'middle' }} />
                     </YAxis>
                     <Tooltip cursor={{ strokeDasharray: '3 3'}} />
                     <Scatter name="Gráfico de Dispersão" data={dados} fill="#0BEBAF" />
@@ -69,28 +107,36 @@ const StudySection = () => {
 
             <div className="flex flex-col items-center">
               <div className="lg:h-1/2">
-                <img src={require("@site/static/img/codigo_grafico_aids.png").default} className="w-full h-fit rounded-sm mb-10" alt="Código para gerar o gráfico da Série Temporal da contagem de casos de AIDS em Manaus, de 2011 a 2023" />
+                <img src={require(`@site/static/img/${imageName2}`).default} className="w-full h-fit rounded-sm mb-10" alt="Código para gerar o gráfico da Série Temporal da contagem de casos de AIDS em Manaus, de 2011 a 2023" />
               </div>
               
               <div className="w-full h-auto lg:h-1/2">
 
                 <div>
-                  <h3 className="text-center text-slate-50 mb-0">Contagem de casos de AIDS em Manaus (2011-2023)</h3>
-                  <p className="text-slate-200 text-center">Agrupado por gênero</p>
+                  <h3 className="text-center text-slate-50 mb-0">
+                    <Translate id="study.plot2Title">
+                      Contagem de casos de AIDS em Manaus (2011-2023)
+                    </Translate>
+                  </h3>
+                  <p className="text-slate-200 text-center">
+                    <Translate id="study.plot2Subtitle">
+                      Agrupado por gênero
+                    </Translate>
+                  </p>
                 </div>
                 
                 <ResponsiveContainer width="100%" height={400}>
                   <LineChart data={aidsData} margin={{ right: 25, left: 25, top: 10, bottom: 25 }}>
                     <CartesianGrid strokeDasharray="0 0" vertical={false} fillOpacity={0.0} fill="#fafafa" />
                     <XAxis dataKey="year" stroke="#FAFAFA">
-                      <Label value="Ano" position="bottom" fill="#fafafa" />
+                      <Label value={plot2Data.x} position="bottom" fill="#fafafa" />
                     </XAxis>
                     <YAxis stroke="#FAFAFA">
-                      <Label value="Contagem de casos" position="left" angle={-90} style={{ textAnchor: 'middle' }} fill="#fafafa" />
+                      <Label value={plot2Data.y} position="left" angle={-90} style={{ textAnchor: 'middle' }} fill="#fafafa" />
                     </YAxis>
                     <Legend verticalAlign="top" height={36} />
-                    <Line type="monotone" name="Masculino" dataKey="male_count" stroke="tomato" animationDuration={5000} animationBegin={400} strokeWidth={3} />
-                    <Line type="monotone" name="Feminino" dataKey="female_count" stroke="#facc15" animationDuration={5000} animationBegin={400} strokeWidth={3} />
+                    <Line type="monotone" name={plot2Data.male} dataKey="male_count" stroke="tomato" animationDuration={5000} animationBegin={400} strokeWidth={3} />
+                    <Line type="monotone" name={plot2Data.female} dataKey="female_count" stroke="#facc15" animationDuration={5000} animationBegin={400} strokeWidth={3} />
                     <Tooltip cursor={{ strokeDasharray: '3 3' }} />
                   </LineChart>
                 </ResponsiveContainer>

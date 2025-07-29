@@ -11,4 +11,10 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["yarn", "run", "dev-start"]
+#ARG START_CMD="dev-start"
+#ENV START_COMMAND=${START_CMD}
+
+#CMD ["yarn", "run", "${START_COMMAND}"]
+ARG START_CMD=dev-start
+ENV START_CMD=$START_CMD
+CMD ["sh", "-c", "yarn run $START_CMD"]

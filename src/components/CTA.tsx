@@ -1,6 +1,6 @@
-import Link from "@docusaurus/Link"
-import Translate from "@docusaurus/Translate"
-import { FC } from "react"
+import Link from "@docusaurus/Link";
+import Translate from "@docusaurus/Translate";
+import { FC } from "react";
 
 interface ICTAButtons {
   className?: string
