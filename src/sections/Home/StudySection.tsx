@@ -41,7 +41,7 @@ const StudySection = () => {
     x: 'Ano',
     y: 'Contagem de casos',
     female: 'Feminino',
-    male: 'Male',
+    male: 'Masculino',
   };
 
   const plot1Data = i18n.currentLocale === "en" ? plot1EnData : plot1BrData;
