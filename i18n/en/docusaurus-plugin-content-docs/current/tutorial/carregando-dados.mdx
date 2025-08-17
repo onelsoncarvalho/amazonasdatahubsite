@@ -67,24 +67,18 @@ head(pib_trimestral, 2)
 ```
 
 ``` text
-  year quarter agriculture livestock forest_fishing_prod extractive_ind
-1 2010       1    336.8214  90.83984            78.59447       278.5944
-2 2010       2    358.7650  96.75799            83.71485       296.7447
-  manufacturing_ind basic_infrastructure construction vehicle_retail_repair
-1          3599.861             268.0974     756.8299              1304.421
-2          3834.390             285.5638     806.1369              1389.403
-  transport_storage_post accomodation_food information_communication
-1               253.5930          454.2111                  139.1699
-2               270.1144          483.8027                  148.2368
-  financial_activities real_state_activities professional_activities
-1             166.1889              885.5208                459.9348
-2             177.0159              943.2118                489.8992
-  public_admin_defense_health_edu private_edu_health art_culture_sport
-1                        2003.139           90.40687          79.95082
-2                        2133.642           96.29682          85.15956
-  domestic_services    taxes
-1          246.9145 2393.526
-2          263.0008 2549.463
+# A tibble: 2 × 21
+   year quarter agriculture livestock forest_fishing_prod extractive_ind
+  <int> <fct>         <dbl>     <dbl>               <dbl>          <dbl>
+1  2010 1              337.      90.8                78.6           279.
+2  2010 2              359.      96.8                83.7           297.
+# ℹ 15 more variables: manufacturing_ind <dbl>, basic_infrastructure <dbl>,
+#   construction <dbl>, vehicle_retail_repair <dbl>,
+#   transport_storage_post <dbl>, accomodation_food <dbl>,
+#   information_communication <dbl>, financial_activities <dbl>,
+#   real_state_activities <dbl>, professional_activities <dbl>,
+#   public_admin_defense_health_edu <dbl>, private_edu_health <dbl>,
+#   art_culture_sport <dbl>, domestic_services <dbl>, taxes <dbl>
 ```
 
 ### Descriptive Statistics

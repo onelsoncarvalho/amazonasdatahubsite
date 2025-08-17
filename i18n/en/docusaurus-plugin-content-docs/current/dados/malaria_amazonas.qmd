@@ -22,91 +22,91 @@ malaria_amazonas
 
 ‘malaria_amazonas’ A data frame with 1098620 rows and 40 columns:
 
-#### notification.state
+#### notification_state
 
 State of notification
 
-#### notification.rh
+#### notification_rh
 
 Health region of notification
 
-#### notification.county
+#### notification_county
 
 County of notification
 
-#### infection.country
+#### infection_country
 
 Probable county where the patient was infected
 
-#### infection.state
+#### infection_state
 
 Probable state where the patient was infected
 
-#### infection.hr
+#### infection_hr
 
 Probable health region where the patient was infected
 
-#### infection.county
+#### infection_county
 
 Probable county where the patient was infected
 
-#### home.country
+#### home_country
 
 Country of residence of the patient
 
-#### home.state
+#### home_state
 
 State of residence of the patient
 
-#### home.hr
+#### home_hr
 
 Health region of residence of the patient
 
-#### home.county
+#### home_county
 
 County of residence of the patient
 
-#### exam.interval
+#### exam_interval
 
 Time interval between notification and examination
 
-#### treatment.interval
+#### treatment_interval
 
 Time interval between examination and beginning of treatment
 
-#### notification.interval
+#### notification_interval
 
 Time interval between symptom and notification
 
-#### notification.month
+#### notification_month
 
 Month in which the notification was recorded
 
-#### notification.year
+#### notification_year
 
 Year in which the notification was recorded
 
-#### symptom.month
+#### symptom_month
 
 Month in which the patient felt the first symptoms of malaria
 
-#### symptom.year
+#### symptom_year
 
 Year in which the patient felt the first symptoms of malaria
 
-#### exam.month
+#### exam_month
 
 Month in which the examination was performed
 
-#### exam.year
+#### exam_year
 
 Year in which the examination was performed
 
-#### treatment.month
+#### treatment_month
 
 Month in which the treatment started
 
-#### treatment.year
+#### treatment_year
 
 Year in which the treatment started
 
@@ -114,19 +114,19 @@ Year in which the treatment started
 
 Health region of residence different than that of notification
 
-#### autochthonous.case
+#### autochthonous_case
 
 Health region of infection identical to that of residence
 
-#### exam.result
+#### exam_result
 
 Result of examination
 
-#### detection.type
+#### detection_type
 
 Type of detection
 
-#### exam.type
+#### exam_type
 
 Type of examination
 
@@ -138,7 +138,7 @@ Indicates if the patient felt a symptom
 
 The result of the examination for other hemiparasites
 
-#### previous.treatment
+#### previous_treatment
 
 Previous treatment for P. vivax or P.falciparum
 
@@ -146,7 +146,7 @@ Previous treatment for P. vivax or P.falciparum
 
 Main activity in the last 15 days
 
-#### education.level
+#### education_level
 
 Level of education of the patient
 
@@ -170,7 +170,7 @@ Indicates pregnancy and the gestational age
 
 Indicates the amount of parasitemia in crosses
 
-#### cvl.case
+#### cvl_case
 
 Indicates the existence of cases of canine visceral leishmaniasis
 
@@ -178,7 +178,7 @@ Indicates the existence of cases of canine visceral leishmaniasis
 
 Indicates the treatment scheme employed
 
-#### qty.parasites
+#### qty_parasites
 
 Indicates the number of parasites per mm^3
 
