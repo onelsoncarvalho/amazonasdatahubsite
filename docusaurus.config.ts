@@ -19,7 +19,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "Nelson-DevStack", // Usually your GitHub org/user name.
+  organizationName: "onelsoncarvalho", // Usually your GitHub org/user name.
   projectName: "amazonasdatahubsite", // Usually your repo name.
 
   onBrokenLinks: "throw",
@@ -106,7 +106,7 @@ const config: Config = {
         //  position: "right",
         //},
         {
-          href: "https://github.com/Nelson-DevStack/amazonasdatahub",
+          href: "https://github.com/onelsoncarvalho/amazonasdatahub",
           label: "GitHub",
           position: "right",
         },
