@@ -1,9 +1,9 @@
 ---
-title: "pib_trimestral"
+title: "gdp_amazonas"
 format: docusaurus-md
 ---
 
-# pib_trimestral
+# gdp_amazonas
 
 Gross Domestic Product - GDP of Amazonas
 
@@ -15,12 +15,12 @@ This database contains information about the Gross Domestic Product (GDP) of the
 ### Usage
 
 ```{r, eval = FALSE}
-pib_trimestral
+gdp_amazonas
 ```
 
 ### Format
 
-‘pib_trimestral’ A data frame with 48 rows and 21 columns:
+‘gdp_amazonas’ A data frame with 48 rows and 21 columns:
 
 #### year
 

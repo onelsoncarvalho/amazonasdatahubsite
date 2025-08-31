@@ -1,9 +1,9 @@
 ---
-title: "pib_trimestral"
+title: "gdp_amazonas"
 format: docusaurus-md
 ---
 
-# pib_trimestral
+# gdp_amazonas
 
 Produto Interno Bruto - PIB do Amazonas
 
@@ -14,12 +14,12 @@ Essa base possui dados sobre o Produto Interno Bruto (PIB) do Estado do Amazonas
 ### Uso
 
 ```{r, eval = FALSE}
-pib_trimestral
+gdp_amazonas
 ```
 
 ### Formato
 
-‘pib_trimestral’ Um data frame com 48 linhas e 21 colunas
+‘gdp_amazonas’ Um data frame com 48 linhas e 21 colunas
 
 #### year
 

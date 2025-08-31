@@ -19,28 +19,28 @@ correspondente usando um `?` (ponto de interrogação) antes do nome da
 base de dados.
 
 ```r
-?agriculture_idam
+?agriculture_amazonas
 ?aids_amazonas
 ?humidity_manaus
 ?malaria_amazonas
-?pib_trimestral
+?gdp_amazonas
 ?rionegro_amazonas
-?school_read_levels
+?srl_muni
 ```
 
 ## Gráfico de Dispersão entre Área plantada e Área colhida de produção de Mandioca
 
-A base de dados `agriculture_idam` fornece dados de produção agrícola do
-Amazonas. Podemos visualizar a dispersão da área plantada e da área
-colhida de diferentes produções, mas para esse exemplo, usaremos dados
-de produção de mandioca.
+A base de dados `agriculture_amazonas` fornece dados de produção
+agrícola do Amazonas. Podemos visualizar a dispersão da área plantada e
+da área colhida de diferentes produções, mas para esse exemplo, usaremos
+dados de produção de mandioca.
 
 Para plotar um gráfico de dispersão simples no R, sem utilizar outros
 pacotes, utilizaremos a função `plot`.
 
 ```r
 # Filtrando dados
-mandioca_prod <- agriculture_idam[agriculture_idam$cultivation == "Mandioca", ]
+mandioca_prod <- agriculture_amazonas[agriculture_amazonas$cultivation == "Mandioca", ]
 
 # Plotando o grafico
 plot(
@@ -67,7 +67,7 @@ utilizaremos os pacotes `dplyr` para estruturar os dados, e o `ggplot`
 para fazer o gráfico e customizá-lo.
 
 ```r
-# install.packages(c("dplyr", "ggplot2"))
+# install.packages(c("dplyr", "ggplot2", "lubridate"))
 require(dplyr)
 require(ggplot2)
 
@@ -122,8 +122,8 @@ humidity_manaus %>%
 
 ## Série temporal do PIB trimestral do Amazonas
 
-Com os dados de `pib_trimestral`, podemos realizar análises a respeito
-dos padrões observados na distribuição de dados pelo intervalo observado
+Com os dados de `gdp_amazonas`, podemos realizar análises a respeito dos
+padrões observados na distribuição de dados pelo intervalo observado
 (2010 a 2021).
 
 Utilizando `dplyr`, podemos selecionar as variáveis de interesse, e com
@@ -133,14 +133,16 @@ formatação de fonte do título e tipos de linha.
 
 ```r
 require(dplyr)
+require(lubridate)
 require(ggplot2)
 
-pib_trimestral %>%
-  select(year, taxes) %>%
-  ggplot(., aes(x = year, y = taxes)) +
+gdp_amazonas %>%
+  mutate(date = make_date(year, (as.numeric(as.character(quarter)) - 1)*3 + 1, 1)) %>%
+  select(date, taxes) %>%
+  ggplot(aes(x = date, y = taxes)) +
   geom_line(linewidth = 1L, colour = "#cb181d") +
   geom_hline(
-        yintercept = mean(pib_trimestral$taxes),
+        yintercept = mean(gdp_amazonas$taxes),
         linetype = "dashed",
         size = 1
   ) +

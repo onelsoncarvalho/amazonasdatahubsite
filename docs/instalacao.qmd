@@ -35,7 +35,7 @@ Ainda no terminal do R, após ter instalado o `devtools`, instale o pacote `amaz
 #| title: instalação
 #| eval: false
 library(devtools)
-install_github("Nelson-DevStack/amazonasdatahub")
+install_github("onelsoncarvalho/amazonasdatahub")
 ```
 
 ## Usando no R

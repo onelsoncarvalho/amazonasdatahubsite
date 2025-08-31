@@ -23,7 +23,7 @@ Until now, the `amazonasdatahub` package includes seven datasets for
 you, wheter you are a student, statistician, or enthusiast, to analyze
 and apply statistical methods.
 
--   agriculture_idam: Plant production data from the Institute of
+-   agriculture_amazonas: Plant production data from the Institute of
     Sustainable Agricultural and Forestry Development of Amazonas - IDAM
     (2023);
 -   aids_amazonas - A dataset of AIDS occurrences from 2011 to 2023 in
@@ -31,11 +31,11 @@ and apply statistical methods.
 -   humidity_manaus: Time series with Extreme Values of Limited Range;
 -   malaria_amazonas: An integrated dataset of malaria notifications in
     the state of Amazonas;
--   pib_trimestral: Gross Domestic Product - GDP of Amazonas;
+-   gdp_amazonas: Gross Domestic Product - GDP of Amazonas;
 -   rionegro_amazonas: A dataset of the Rio Negro River (Amazonas) level
     from 2003 to 2023;
--   school_read_levels: Physical literacy and reading performance of
-    amazonian schoolchildren: an association study.
+-   srl_muni: Physical literacy and reading performance of amazonian
+    schoolchildren: an association study.
 
 As soon as the package is loaded, these datasets can be accessed.
 
@@ -46,13 +46,13 @@ about the dataset and what each variable represents. To view the
 documentation, simply use `?` followed by the dataset name.
 
 ```r
-?agriculture_idam
+?agriculture_amazonas
 ?aids_amazonas
 ?humidity_manaus
 ?malaria_amazonas
-?pib_trimestral
+?gdp_amazonas
 ?rionegro_amazonas
-?school_read_levels
+?srl_muni
 ```
 
 ## Data - Quarterly GDP
@@ -63,7 +63,7 @@ With `amazonadatahub` installed and the data loaded, you can use the
 datasets simply by declaring their names.
 
 ```r
-head(pib_trimestral, 2)
+head(gdp_amazonas, 2)
 ```
 
 ``` text
@@ -86,7 +86,7 @@ head(pib_trimestral, 2)
 You can use the `summary` to check the descriptive statistics:
 
 ```r
-summary(pib_trimestral)
+summary(gdp_amazonas)
 ```
 
 ``` text

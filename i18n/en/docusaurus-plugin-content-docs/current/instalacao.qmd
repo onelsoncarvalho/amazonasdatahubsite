@@ -38,6 +38,11 @@ After installing `devtools`, you can install the `amazonasdatahub` package throu
 library(devtools)
 install_github("Nelson-DevStack/amazonasdatahub")
 ```
+You can also install using the `ìnstall_github()` method from `remotes` package:
+
+```{r}
+remotes::install_github("onelsoncarvalho/amazonasdatahub")
+```
 
 ## Using in R
 

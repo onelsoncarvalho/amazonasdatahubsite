@@ -1,10 +1,10 @@
 
 ---
-title: "agriculture_idam"
+title: "agriculture_amazonas"
 format: docusaurus-md
 ---
 
-# agriculture_idam
+# agriculture_amazonas
 
 Dados de produção vegetal do Instituto de Desenvolvimento Agropecuário e Florestal Sustentável do Amazonas (2023)
 
@@ -15,12 +15,12 @@ Esse banco de dados que é a consolidação de dados dos relatórios de atividad
 ### Uso
 
 ```{r, eval = FALSE}
-agriculture_idam
+agriculture_amazonas
 ```
 
 ### Formato
 
-‘agriculture_idam’ Um data frame com 1072 linhas e 13 colunas:
+‘agriculture_amazonas’ Um data frame com 1072 linhas e 13 colunas:
 
 #### municipality
 

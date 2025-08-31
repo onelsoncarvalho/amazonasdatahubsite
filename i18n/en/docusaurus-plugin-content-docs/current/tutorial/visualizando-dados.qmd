@@ -14,24 +14,24 @@ library(amazonasdatahub)
 For each dataset, you can check the documentation using ```?``` before the dataset name.
 
 ```{r}
-?agriculture_idam
+?agriculture_amazonas
 ?aids_amazonas
 ?humidity_manaus
 ?malaria_amazonas
-?pib_trimestral
+?gdp_amazonas
 ?rionegro_amazonas
-?school_read_levels
+?srl_muni
 ```
 
 ## Scatter plot of planted area and harvested area from cassava production
 
-The dataset ```agriculture_idam``` provides crop production data from Amazonas. We can make a scatter plot of planted area and harvested area of filtered productions, In this example, we will use cassava production.
+The dataset ```agriculture_amazonas``` provides crop production data from Amazonas. We can make a scatter plot of planted area and harvested area of filtered productions, In this example, we will use cassava production.
 
 To plot a simple scatter plot in R, without using external packages, we will use the ```plot``` function.
 
 ```{r}
 # Filtering data
-mandioca_prod <- agriculture_idam[agriculture_idam$cultivation == "Mandioca", ]
+mandioca_prod <- agriculture_amazonas[agriculture_amazonas$cultivation == "Mandioca", ]
 
 # Scatter Plot
 plot(
@@ -97,22 +97,24 @@ humidity_manaus %>%
 
 ## Time series of Quarterly GDP of Amazonas
 
-With the data from ```pib_trimestral```, we can perform analyses regarding the patterns observed in the distribution of data over the observed interval (2010 to 2021).
+With the data from ```gdp_amazonas```, we can perform analyses regarding the patterns observed in the distribution of data over the observed interval (2010 to 2021).
 
 Using ```dply``` and ```ggplot2``, we can select the variables of interest and creating a line chart. This example will demonstrate this application, as well as more advanced customizations, including colors, title font formatting and line types.
 
 ```{r}
-# Loading dplyr and ggplot2
+# Loading dplyr, lubridate and ggplot2
 require(dplyr)
+require(lubridate)
 require(ggplot2)
 
 # Selecting only year and taxes and ploting
-pib_trimestral %>%
-  select(year, taxes) %>%
-  ggplot(., aes(x = year, y = taxes)) +
+gdp_amazonas %>%
+  mutate(date = make_date(year, (as.numeric(as.character(quarter)) - 1)*3 + 1, 1)) %>%
+  ggplot(aes(x = date, y = taxes)) +
+  scale_x_date(date_breaks = "2 years", date_labels = "%Y") +
   geom_line(linewidth = 1L, colour = "#cb181d") +
   geom_hline(
-    yintercept = mean(pib_trimestral$taxes),
+    yintercept = mean(gdp_amazonas$taxes),
     linetype = "dashed",
     size = 1
   ) +
@@ -126,7 +128,6 @@ pib_trimestral %>%
     title = "Quarterly GDP of Amazonas",
     subtitle = "2010 - 2021"
   )
-
 ```
 
 ## Boxplots of water level (in meters) of Rio Negro (Amazonas)
