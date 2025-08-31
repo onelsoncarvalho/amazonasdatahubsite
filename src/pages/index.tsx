@@ -7,6 +7,7 @@ import ContributeSection from "../sections/Home/ContributeSection";
 import ContactSection from "../sections/ContactSection";
 import WhySection from '../sections/Home/WhySection';
 import CustomFooter from "../components/CustomFooter"
+import AboutSection from '../sections/Home/AboutSection.tsx'
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
@@ -20,6 +21,7 @@ export default function Home(): JSX.Element {
         <StudySection />
         <FeaturesSection />
         <ContributeSection />
+        <AboutSection />
         <ContactSection />
         <CustomFooter />
       </main>

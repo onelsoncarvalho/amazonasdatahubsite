@@ -351,5 +351,11 @@
   "theme.unlistedContent.message": {
     "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
     "description": "The unlisted content banner message"
+  },
+  "aboutsection.title": {
+    "message": "Quem somos?"
+  },
+  "aboutsection.description": {
+    "message": "O Amazonas DataHub é um projeto do Programa Institucional de Bolsas de Iniciação Científica (PIBIC) da Universidade Federal do Amazonas, realizado no curso de Estatística, na área de Probabilidade e Estatística. Tendo como orientador o Prof. Dr. Leonardo Brandão Freitas do Nascimento e como discente voluntário do curso de Estatística, Nelson Geraldo Aquino de Carvalho, o projeto visa promover a acessibilidade a dados científicos tratados sobre o Amazonas, disponibilizando uma fonte de informações para pesquisadores, estudantes e profissionais interessados na região, além de oferecer materiais de ensino sobre a região."
   }
 }

@@ -1,4 +1,10 @@
 {
+  "aboutsection.title": {
+    "message": "About us"
+  },
+  "aboutsection.description": {
+    "message": "Amazonas DataHub is a project of the Institutional Scientific Initiation Scholarship Program (PIBIC) at the Federal University of Amazonas, carried out within the Statistics program in the field of Probability and Statistics. Supervised by Professor Leonardo Brandão Freitas do Nascimento and developed within the scope of scientific initiation by the Statistics undergraduate volunteer Nelson Geraldo Aquino de Carvalho, the project aims to promote accessibility to curated scientific data of Amazonas, providing a source of information for researchers, students, and professionals interested in the region, as well as serving as educational material about the state."
+  },
   "contactsection.title": {
     "message": "Get in touch"
   },

@@ -28,10 +28,10 @@ const ContactSection = () => {
                 nelsoncarvalho.negocios@gmail.com
               </span>
             </span>
-            <Link to="https://github.com/Nelson-DevStack/amazonasdatahub" className="no-underline p-2 px-4 flex flex-row gap-2 bg-black text-slate-50 text-lg rounded-full items-center border-1 border-transparent transition duration-200 hover:border-solid hover:border-1 hover:border-teal-400 hover:shadow-lg hover:shadow-cyan-500/50 cursor-pointer">
+            <Link to="https://github.com/onelsoncarvalho/amazonasdatahub" className="no-underline p-2 px-4 flex flex-row gap-2 bg-black text-slate-50 text-lg rounded-full items-center border-1 border-transparent transition duration-200 hover:border-solid hover:border-1 hover:border-teal-400 hover:shadow-lg hover:shadow-cyan-500/50 cursor-pointer">
               <GitHubLogo title="Logo do GitHub" />
               <span>
-                Nelson-DevStack
+                onelsoncarvalho
               </span>
             </Link>
           </div>
