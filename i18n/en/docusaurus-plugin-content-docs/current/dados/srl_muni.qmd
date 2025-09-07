@@ -1,10 +1,10 @@
 
 ---
-title: "school_read_levels"
+title: "srl_muni"
 format: docusaurus-md
 ---
 
-# school_read_levels
+# srl_muni
 
 Physical literacy and reading performance of amazonian school children.
 
@@ -15,12 +15,12 @@ This is a dataset from an association, cross-sectional, quantitative study carri
 ### Usage
 
 ```{r, eval = FALSE}
-school_read_levels
+srl_muni
 ```
 
 ### Format
 
-‘school_read_levels’ A data frame with 100 rows and 17 columns:
+‘srl_muni’ A data frame with 100 rows and 17 columns:
 
 #### school
 
