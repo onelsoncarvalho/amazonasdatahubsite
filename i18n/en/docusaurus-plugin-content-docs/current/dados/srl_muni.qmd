@@ -78,9 +78,9 @@ Sedentary Behavior - Evalutes the exposition time to sedentary behaviors. Measur
 
 Pyshical Activity (PA) - Level of physical activity in children, based on the frequency and duration of routine daily activities. Measured by score on the physical activity frequency questions.
 
-#### sts_s
+#### mc
 
-Supine To Stand (in seconds) - Measures the time (in seconds) it takes for the child to stand up from the floor, from a supine position to a standing position.
+Motor Competence - Supine To Stand (in seconds) - Measures the time (in seconds) it takes for the child to stand up from the floor, from a supine position to a standing position.
 
 #### tde
 
