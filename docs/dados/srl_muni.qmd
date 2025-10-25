@@ -6,11 +6,11 @@ format: docusaurus-md
 
 # srl_muni
 
-Physical Literacy e Desempenho em Leitura de escolares amazônicos : um estudo de associação
+Physical Literacy (Letramento Físico) e Desempenho em Leitura de crianças de escolas do Amazonas: um estudo de associação
 
 ### Descrição
 
-Uma base de dados com o objetivo de investigar a associação entre Physical Literacy e Desempenho em Leitura de escolares amazônicos. Método: Trata-se de um estudo de associação, transversal e de abordagem quantitativa realizado com escolares amazônicos (n=100; idade entre 10 e 13 anos) de 3 escolas públicas do município de Borba (Amazonas).
+Uma base de dados com o objetivo de investigar a associação entre Letramento Físico e Desempenho em Leitura de escolares amazônicos. Método: Trata-se de um estudo de associação, transversal e de abordagem quantitativa realizado com estudantes de escolas do Amazonas (n=100; idade entre 10 e 13 anos) de 3 escolas públicas do município de Borba (Amazonas).
 
 ### Uso
 
@@ -78,7 +78,7 @@ Sedentary Behavior (SB) ou Comportamento Sedentário (CS). Avalia o tempo de exp
 
 #### pa
 
-Pyshical Activity (PA) ou Atividade Física - Nível de atividade física da criança, com base em frequência e duração de atividades cotidianas. Medido por pontuação em questionário de frequência de atividade física.
+Physical Activity (PA) ou Atividade Física - Nível de atividade física da criança, com base em frequência e duração de atividades cotidianas. Medido por pontuação em questionário de frequência de atividade física.
 
 #### mc
 
