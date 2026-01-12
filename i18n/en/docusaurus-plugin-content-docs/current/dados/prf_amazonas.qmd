@@ -15,7 +15,7 @@ Traffic accident data from Amazonas 2025
 ### Usage
 
 ```{r, eval = FALSE}
-srl_muni
+prf_amazonas
 ```
 
 ### Format
