@@ -16,18 +16,22 @@ library(amazonasdatahub)
 
 ```{r}
 #| echo: false
+library(dplyr)
+require(dplyr)
+library(amazonasdatahub)
 require(amazonasdatahub) #dev
 ```
 
 ## Dados do AmazonasDataHub
 
-Até o momento, o pacote `amazonasdatahub` conta com sete bases de dados para você, estudante, estatístico ou entusiasta, para analisar e aplicar métodos estatísticos.
+Até o momento, o pacote `amazonasdatahub` conta com oito bases de dados para você, estudante, estatístico ou entusiasta, para analisar e aplicar métodos estatísticos.
 
 -   agriculture_amazonas: Plant production data from the Institute of Sustainable Agricultural and Forestry Development of Amazonas - IDAM (2023);
 -   aids_amazonas - A dataset of AIDS occurrences from 2011 to 2023 in Amazonas;
+-   gdp_amazonas: Gross Domestic Product - GDP of Amazonas;
 -   humidity_manaus: Time series with Extreme Values of Limited Range;
 -   malaria_amazonas: An integrated dataset of malaria notifications in the state of Amazonas;
--   gdp_amazonas: Gross Domestic Product - GDP of Amazonas;
+-   prf_amazonas: Traffic accident data from Amazonas recorded by Federal Highway Police in 2025;
 -   rionegro_amazonas: A dataset of the Rio Negro River (Amazonas) level from 2003 to 2023;
 -   srl_muni: Physical literacy and reading performance of amazonian schoolchildren: an association study.
 
@@ -40,9 +44,10 @@ Cada base de dados do `amazonasdatahub` é documentada, explicando detalhes sobr
 ```{r}
 ?agriculture_amazonas
 ?aids_amazonas
+?gdp_amazonas
 ?humidity_manaus
 ?malaria_amazonas
-?gdp_amazonas
+?prf_amazonas
 ?rionegro_amazonas
 ?srl_muni
 ```

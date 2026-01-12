@@ -9,6 +9,7 @@ format: docusaurus-md
 See how easily you can create plots from the data available in this
 package
 
+
 ```r
 library(amazonasdatahub)
 ```
@@ -18,13 +19,15 @@ library(amazonasdatahub)
 For each dataset, you can check the documentation using `?` before the
 dataset name.
 
+
 ```r
 ?agriculture_amazonas
 ?aids_amazonas
+?gdp_amazonas
 ?humidity_manaus
 ?malaria_amazonas
-?gdp_amazonas
 ?rionegro_amazonas
+?prf_amazonas
 ?srl_muni
 ```
 
@@ -37,6 +40,7 @@ production.
 
 To plot a simple scatter plot in R, without using external packages, we
 will use the `plot` function.
+
 
 ```r
 # Filtering data
@@ -66,12 +70,13 @@ sex/gender of each observation. To do this, we will use the `dplyr`
 package to structure the data and the `ggplot2` package to create and
 customize the chart.
 
+
 ```r
 # Loading dplyr and ggplot to structure the data
 require(dplyr)
 require(ggplot2)
 
-# Filtering by municipality and ploting case count by gender
+# Filtering by municipality and plotting case count by gender
 aids_amazonas %>%
   filter(name_muni == "Manaus") %>%
   group_by(gender) %>%
@@ -98,6 +103,7 @@ interval.
 
 Using `dplyr`, we can create a date column, which will be composed of
 the month and year, and `ggplot2`, we can create the time series chart.
+
 
 ```r
 # Loading dplyr and ggplot to structure the data
@@ -130,13 +136,14 @@ and creating a line chart. This example will demonstrate this
 application, as well as more advanced customizations, including colors,
 title font formatting and line types.
 
+
 ```r
 # Loading dplyr, lubridate and ggplot2
 require(dplyr)
 require(lubridate)
 require(ggplot2)
 
-# Selecting only year and taxes and ploting
+# Selecting only year and taxes and plotting
 gdp_amazonas %>%
   mutate(date = make_date(year, (as.numeric(as.character(quarter)) - 1)*3 + 1, 1)) %>%
   ggplot(aes(x = date, y = taxes)) +
@@ -168,6 +175,7 @@ can be done is visualizing a chart of boxplots of water level over the
 years.
 
 We will be using `dplyr` and `ggplot2`.
+
 
 ```r
 # Loading ggplot
@@ -261,6 +269,7 @@ We can conclude that these “0” values correspond to missing data (NAs),
 which were filled with a zero value. We will replace these zero values
 with NAs.
 
+
 ```r
 require(tidyr)
 rionegro_amazonas_2010_02 <- rionegro_amazonas_2010_02 %>%
@@ -284,6 +293,7 @@ Now that we have defined the missing values, we can choose a method to
 handle them. In this example, we will use Forward-Fill, but we encourage
 you to research and try other methods to learn different ways of
 handling missing values.
+
 
 ```r
 require(tidyr)
@@ -358,3 +368,39 @@ rionegro_amazonas_2010_02 %>%
 Therefore, it is noteworthy that the treatment of these outlie values,
 which were considered missing, made all difference in the conclusion
 about the data on the level of the Rio Negro.
+
+## Accident Count by Weather Condition
+
+Utilizing the `prf_amazonas` database, we can perform analyses of
+accidents recorded by the Federal Highway Police (PRF) in the state of
+Amazonas in the year 2025.
+
+We can check the frequency of accidents by weather condition and
+identify which of these conditions presents a higher frequency of
+accidents.
+
+
+```r
+# Importing packages
+require(dplyr)
+require(forcats)
+require(ggplot2)
+
+# Counting accidents grouped by weather condition and plotting
+prf_amazonas %>%
+  count(weather) %>%
+  mutate(
+    weather = fct_reorder(weather, -n)
+  ) %>%
+  ggplot(aes(x = weather, y = n)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  geom_text(aes(label = n), vjust = -0.5) +
+  theme_minimal() +
+  labs(
+    title = "Accident count by weather condition",
+    x = "Weather",
+    y = "Count"
+  )
+```
+
+![](visualizando-dados.markdown_strict_files/figure-markdown_strict/unnamed-chunk-12-1.png)

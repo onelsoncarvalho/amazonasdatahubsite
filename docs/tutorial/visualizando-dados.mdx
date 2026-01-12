@@ -8,6 +8,7 @@ format: docusaurus-md
 
 Veja como facilmente criar gráficos dos dados disponíveis nesse pacote.
 
+
 ```r
 library(amazonasdatahub)
 ```
@@ -18,13 +19,15 @@ Para cada base de dados, você pode verificar a documentação
 correspondente usando um `?` (ponto de interrogação) antes do nome da
 base de dados.
 
+
 ```r
 ?agriculture_amazonas
 ?aids_amazonas
+?gdp_amazonas
 ?humidity_manaus
 ?malaria_amazonas
-?gdp_amazonas
 ?rionegro_amazonas
+?prf_amazonas
 ?srl_muni
 ```
 
@@ -37,6 +40,7 @@ dados de produção de mandioca.
 
 Para plotar um gráfico de dispersão simples no R, sem utilizar outros
 pacotes, utilizaremos a função `plot`.
+
 
 ```r
 # Filtrando dados
@@ -65,6 +69,7 @@ contagem de casos filtrado de determinado município, onde os casos são
 agrupados pelo sexo do indivíduo observado. Para fazer isso,
 utilizaremos os pacotes `dplyr` para estruturar os dados, e o `ggplot`
 para fazer o gráfico e customizá-lo.
+
 
 ```r
 # install.packages(c("dplyr", "ggplot2", "lubridate"))
@@ -99,6 +104,7 @@ relativa durante esse intervalo de tempo.
 Usando `dplyr`, podemos criar uma coluna de data, que será composta
 pelos dados de mês e ano, e com o `ggplot2`, podemos criar o gráfico.
 
+
 ```r
 # install.packages(c("dplyr", "ggplot2"))
 require(dplyr)
@@ -130,6 +136,7 @@ Utilizando `dplyr`, podemos selecionar as variáveis de interesse, e com
 o `ggplot2`, criaremos um gráfico de linha. Esse exemplo mostrará essa
 aplicação, além de customizações mais avançadas, incluindo cores,
 formatação de fonte do título e tipos de linha.
+
 
 ```r
 require(dplyr)
@@ -166,6 +173,7 @@ Com os dados do nível de água e ano do `rionegro_amazonas`, uma das
 análises que podem ser feitas é a dos boxplots no decorrer dos anos.
 
 Utilizaremos o `ggplot2` para fazer esse gráfico.
+
 
 ```r
 require(ggplot2)
@@ -258,6 +266,7 @@ Podemos concluir que esses valores “0”, vistos no gráfico dos Boxplots,
 correspondem a dados ausentes (NA), os quais foram preenchidos com o
 valor zero. Iremos substituir esses valores zero por NAs.
 
+
 ```r
 require(tidyr)
 rionegro_amazonas_2010_02 <- rionegro_amazonas_2010_02 %>%
@@ -281,6 +290,7 @@ Agora que definimos os valores faltantes, podemos escolher um método
 para tratá-los. Nesse exemplo, usaremos o Foward-Fill, mas encorajamos
 você a pesquisar e tentar utilizar outros métodos para aprender
 diferentes formas de tratamentos de valores faltantes.
+
 
 ```r
 require(tidyr)
@@ -357,3 +367,39 @@ rionegro_amazonas_2010_02 %>%
 Portanto, é notável que o tratamento desses valores outliers, que foram
 considerados faltantes fez toda diferença na conclusão sobre os dados do
 nível do Rio Negro.
+
+## Contagem de acidentes por condição climática
+
+Com a base de dados `prf_amazonas`, podemos fazer análises de dados de
+acidentes registrados pela Polícia Rodoviária Federal (PRF) no estado do
+Amazonas no ano de 2025.
+
+Podemos checar a frequência de acidentes por condição climática e
+identificar qual dessas condições apresenta uma frequência maior de
+acidentes.
+
+
+```r
+# Importanto pacotes para organizacao e visualizacao de dados
+require(dplyr)
+require(forcats)
+require(ggplot2)
+
+# Contando acidentes agrupados por condicao climatica e fazendo o grafico
+prf_amazonas %>%
+  count(weather) %>%
+  mutate(
+    weather = fct_reorder(weather, -n)
+  ) %>%
+  ggplot(aes(x = weather, y = n)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  geom_text(aes(label = n), vjust = -0.5) +
+  theme_minimal() +
+  labs(
+    title = "Contagem de acidentes por condição climática",
+    x = "Condição climática",
+    y = "Contagem"
+  )
+```
+
+![](visualizando-dados.markdown_strict_files/figure-markdown_strict/unnamed-chunk-12-1.png)
