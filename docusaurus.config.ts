@@ -82,7 +82,9 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
+    metadata: [
+      {name: 'google-site-verification', content: '6MCkcHoAPuxo8EpKWzrPaHT6cjxvbXF0wBjIIebps74' }
+    ],
     image: "img/docusaurus-social-card.jpg",
     navbar: {
       title: "Amazonas DataHub",
@@ -117,6 +119,7 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
       additionalLanguages: ["r"]
     },
+
     //algolia: {
     //  appId: "0CMHNGVUX0",
     //  apiKey: "fb8a8bf7f10a789e5c28ae7be4f70512",
