@@ -7,7 +7,7 @@ const config: Config = {
   title: "Amazonas DataHub",
   tagline: "Dados do estado do Amazonas para aplicar Deep Learning",
   // favicon: "img/favicon.ico",
-  favicon: "img/logo_amazonasdatahub.png",
+  favicon: "img/favicon.png",
 
   // Set the production url of your site here
   // url: "https://your-docusaurus-site.example.com",
@@ -91,7 +91,10 @@ const config: Config = {
 
   themeConfig: {
     metadata: [
-      {name: 'google-site-verification', content: '6MCkcHoAPuxo8EpKWzrPaHT6cjxvbXF0wBjIIebps74' }
+      { name: 'google-site-verification', content: '6MCkcHoAPuxo8EpKWzrPaHT6cjxvbXF0wBjIIebps74' },
+      { name: 'og:site_name', content: 'Amazonas DataHub' },
+      { name: 'og:title', content: 'Amazonas DataHub' },
+      { name: 'og:type', content: 'website' }
     ],
     image: "img/docusaurus-social-card.jpg",
     navbar: {
