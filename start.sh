@@ -1,16 +1,23 @@
 #!/usr/bin/env bash
+CONTAINER_NAME="amazonasdatahub_dev"
 
 handler(){
   echo "Processing the Ctrl + C"
-  docker system prune -a
+  echo "Stopping the container '$CONTAINER_NAME' immediately"
+  docker stop -t 0 "$CONTAINER_NAME"
   exit 0
 }
-
 trap handler INT
 
 START_CMD=${1:-dev-start}
 
-docker build --build-arg START_CMD="$START_CMD" -t amazonasdatahubsite .
-open http://localhost:3000/amazonasdatahubsite/
+docker build --build-arg START_CMD="$START_CMD" -t amazonasdatahubsite . || exit 1
 
-docker run -i -v /home/nelsonworkstation/Documents/work/amazonasdatahubsite:/usr/src/app:delegated -v /usr/src/app/node_modules/ -p 3000:3000 amazonasdatahubsite
+docker stop -t 0 "$CONTAINER_NAME" 2>/dev/null
+docker rm -f "$CONTAINER_NAME" 2>/dev/null
+
+docker run -it --rm \
+  --name "$CONTAINER_NAME" \
+  -v /home/nelsonworkstation/Documents/work/amazonasdatahubsite:/usr/src/app:delegated \
+  -p 3000:3000 \
+  amazonasdatahubsite

@@ -14,5 +14,33 @@
   "sidebar.tutorialSidebar.category.Bases de Dados": {
     "message": "Bases de Dados",
     "description": "The label for category Bases de Dados in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Documentação": {
+    "message": "Documentação",
+    "description": "The label for category Documentação in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Documentação.link.generated-index.title": {
+    "message": "Introdução",
+    "description": "The generated-index page title for category Documentação in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Documentação.link.generated-index.description": {
+    "message": "Selecione abaixo a linguagem de programação que deseja utilizar o AmazonasDataHub:",
+    "description": "The generated-index page description for category Documentação in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Python": {
+    "message": "Python",
+    "description": "The label for category Python in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Python.link.generated-index.description": {
+    "message": "Documentação do AmazonasDataHub na versão em Python",
+    "description": "The generated-index page description for category Python in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.R": {
+    "message": "R",
+    "description": "The label for category R in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.R.link.generated-index.description": {
+    "message": "Documentação do AmazonasDataHub na versão em R",
+    "description": "The generated-index page description for category R in sidebar tutorialSidebar"
   }
 }
