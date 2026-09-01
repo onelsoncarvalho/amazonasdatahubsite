@@ -21,7 +21,7 @@
     "message": "Knowledge at your fingertips"
   },
   "home.header.title": {
-    "message": "Amazonas DataHub: data from Amazonas state (Brazil) to apply statistical methods"
+    "message": "Amazonas DataHub: Integrating Data, Research and Education"
   },
   "home.header.subtitle": {
     "message": "With this open-source R package, you will have access to various datasets to apply statistical methods, Machine Learning and Deep Learning."

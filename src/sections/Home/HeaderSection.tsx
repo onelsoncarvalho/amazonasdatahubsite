@@ -10,12 +10,13 @@ const HomepageHeader = () => {
           <h1 className="text-slate-50 tracking-tighter leading-none md:text-5xl">
             <Translate id="home.header.title">
               {/* Amazonas DataHub: dados do estado do Amazonas para aplicar Deep Learning */}
-              Amazonas DataHub: dados do Amazonas para aplicação de métodos estatísticos
+              {/* Amazonas DataHub: dados do Amazonas para aplicação de métodos estatísticos */}
+              Amazonas DataHub: Integrando dados, Pesquisa e Ensino
             </Translate>
           </h1>
           <p className="text-slate-300 leading-tight text-xl">
             <Translate id="home.header.subtitle">
-              Com esse pacote de código aberto do R, você terá acesso a diversas bases de dados do Amazonas para aplicar métodos estatísticos, Deep Learning (Aprendizado Profundo) e Machine Learning (Aprendizado de Máquina).
+              Com esse pacote de código aberto do Python e R, você terá acesso a diversas bases de dados do Amazonas para aplicar métodos estatísticos, Deep Learning (Aprendizado Profundo) e Machine Learning (Aprendizado de Máquina).
             </Translate>
           </p>
           <div className="flex gap-4">
