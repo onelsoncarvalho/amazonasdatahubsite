@@ -37,13 +37,12 @@ const config: Config = {
     tailwindPlugin,
     // Google Analytics Plugin
     [
-      '@docusaurus/plugin-google-gtag',
+      "@docusaurus/plugin-google-gtag",
       {
-        trackingID: 'G-V8XCSGBSKS',
+        trackingID: "G-V8XCSGBSKS",
         anonymizeIP: true,
       },
     ],
-
   ],
 
   presets: [
@@ -69,10 +68,10 @@ const config: Config = {
         },
 
         sitemap: {
-          changefreq: 'weekly',
+          changefreq: "weekly",
           priority: 0.5,
-          ignorePatterns: ['/tags/**'],
-          filename: 'sitemap.xml',
+          ignorePatterns: ["/tags/**"],
+          filename: "sitemap.xml",
         },
       } satisfies Preset.Options,
     ],
@@ -85,16 +84,17 @@ const config: Config = {
     //   },
     // },
     // ],
-
-
   ],
 
   themeConfig: {
     metadata: [
-      { name: 'google-site-verification', content: '6MCkcHoAPuxo8EpKWzrPaHT6cjxvbXF0wBjIIebps74' },
-      { name: 'og:site_name', content: 'Amazonas DataHub' },
-      { name: 'og:title', content: 'Amazonas DataHub' },
-      { name: 'og:type', content: 'website' }
+      {
+        name: "google-site-verification",
+        content: "6MCkcHoAPuxo8EpKWzrPaHT6cjxvbXF0wBjIIebps74",
+      },
+      { name: "og:site_name", content: "Amazonas DataHub" },
+      { name: "og:title", content: "Amazonas DataHub" },
+      { name: "og:type", content: "website" },
     ],
     image: "img/docusaurus-social-card.jpg",
     navbar: {
@@ -104,15 +104,40 @@ const config: Config = {
         src: "img/logo_amazonasdatahub.png",
       },
       items: [
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "tutorialSidebar",
+        //   position: "left",
+        //   label: "Documentação",
+        // },
         {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Documentação",
+          label: "Documentações",
+          items: [
+            {
+              label: "Documentação em R",
+              href: "https://onelsoncarvalho.github.io/amazonasdatahub",
+            },
+            {
+              label: "Documentação em Python",
+              href: "https://onelsoncarvalho.github.io/amazonasdatahub",
+            },
+          ],
+        },
+        {
+          label: "Dados",
+          href: "/",
+        },
+        {
+          label: "Pesquisa",
+          href: "/",
+        },
+        {
+          label: "Ensino",
+          href: "/",
         },
         {
           type: "localeDropdown",
-          position: "right"
+          position: "right",
         },
         //{
         //  type: "search",
@@ -128,7 +153,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ["r"]
+      additionalLanguages: ["r"],
     },
 
     //algolia: {

@@ -21,10 +21,10 @@
     "message": "O conhecimento na palma de suas mãos"
   },
   "home.header.title": {
-    "message": "Amazonas DataHub: dados do Amazonas para aplicação de métodos estatísticos"
+    "message": "Amazonas DataHub: Integrando Dados, Pesquisa e Ensino"
   },
   "home.header.subtitle": {
-    "message": "Com esse pacote de código aberto do R, você terá acesso a diversas bases de dados do Amazonas para aplicar métodos estatísticos, Deep Learning (Aprendizado Profundo) e Machine Learning (Aprendizado de Máquina)."
+    "message": "Com esse pacote de código aberto do Python e R, você terá acesso a diversas bases de dados do Amazonas para aplicar métodos estatísticos, Deep Learning (Aprendizado Profundo) e Machine Learning (Aprendizado de Máquina)."
   },
   "studysection.title": {
     "message": "Estude e explore dados do Amazonas"
