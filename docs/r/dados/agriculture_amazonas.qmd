@@ -4,8 +4,6 @@ title: "agriculture_amazonas"
 format: docusaurus-md
 ---
 
-# agriculture_amazonas
-
 Dados de produção vegetal do Instituto de Desenvolvimento Agropecuário e Florestal Sustentável do Amazonas (2023)
 
 ### Descrição

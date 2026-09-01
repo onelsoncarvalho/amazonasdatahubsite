@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-[#1C2430]">
       <Container className="border-solid border-b-0 border-x-0 border-t-2 border-slate-600">
         <div className="col-span-full md:col-span-4 lg:col-span-6 flex items-center justify-items-center h-full">
-          <p className="textl-lg md:text-xl text-slate-300 m-0">Desenvolvido por Nelson Carvalho - 2024</p>
+          <p className="textl-lg md:text-xl text-slate-300 m-0">Desenvolvido por Nelson Carvalho - 2024 - 2026</p>
         </div>
 
         <div className="col-span-full md:col-span-4 lg:col-span-6 flex gap-4 justify-center md:justify-end">
