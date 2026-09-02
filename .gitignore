@@ -155,3 +155,4 @@ dist
 
 
 relatorio/
+**/*.quarto_ipynb

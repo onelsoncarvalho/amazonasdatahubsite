@@ -124,16 +124,22 @@ const config: Config = {
           ],
         },
         {
+          type: "doc",
+          docId: "dados/index",
           label: "Dados",
-          href: "/",
+          position: "left",
         },
         {
+          type: "doc",
+          docId: "pesquisa/index",
           label: "Pesquisa",
-          href: "/",
+          position: "left",
         },
         {
+          type: "doc",
+          docId: "ensino/index",
           label: "Ensino",
-          href: "/",
+          position: "left",
         },
         {
           type: "localeDropdown",
