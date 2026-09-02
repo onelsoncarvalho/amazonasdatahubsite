@@ -18,5 +18,29 @@
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
+  },
+  "item.label.Documentações": {
+    "message": "Documentações",
+    "description": "Navbar item with label Documentações"
+  },
+  "item.label.Dados": {
+    "message": "Data",
+    "description": "Navbar item with label Data"
+  },
+  "item.label.Pesquisa": {
+    "message": "Research",
+    "description": "Navbar item with label Research"
+  },
+  "item.label.Ensino": {
+    "message": "Education",
+    "description": "Navbar item with label Education"
+  },
+  "item.label.Documentação em R": {
+    "message": "R Docs",
+    "description": "Navbar item with label R Docs"
+  },
+  "item.label.Documentação em Python": {
+    "message": "Python Docs",
+    "description": "Navbar item with label Python Docs"
   }
 }

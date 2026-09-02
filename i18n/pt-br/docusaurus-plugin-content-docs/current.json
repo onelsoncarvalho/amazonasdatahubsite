@@ -42,5 +42,9 @@
   "sidebar.tutorialSidebar.category.R.link.generated-index.description": {
     "message": "Documentação do AmazonasDataHub na versão em R",
     "description": "The generated-index page description for category R in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Dados": {
+    "message": "Dados",
+    "description": "The label for category Dados in sidebar tutorialSidebar"
   }
 }

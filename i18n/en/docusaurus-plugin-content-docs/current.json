@@ -13,7 +13,7 @@
   },
   "sidebar.tutorialSidebar.category.Dados": {
     "message": "Data",
-    "description": "The label for category Dados - Visão Geral in sidebar tutorialSidebar"
+    "description": "The label for category Dados in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Datasets": {
     "message": "Datasets",

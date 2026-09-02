@@ -124,22 +124,22 @@ const config: Config = {
           ],
         },
         {
-          type: "doc",
-          docId: "dados/index",
+          to: "/docs/dados",
           label: "Dados",
           position: "left",
+          activeBaseRegex: "/docs/dados(/|$)",
         },
         {
-          type: "doc",
-          docId: "pesquisa/index",
+          to: "/docs/pesquisa",
           label: "Pesquisa",
           position: "left",
+          activeBaseRegex: "/docs/pesquisa(/|$)",
         },
         {
-          type: "doc",
-          docId: "ensino/index",
+          to: "/docs/ensino",
           label: "Ensino",
           position: "left",
+          activeBaseRegex: "/docs/ensino(/|$)",
         },
         {
           type: "localeDropdown",
