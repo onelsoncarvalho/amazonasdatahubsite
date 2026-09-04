@@ -15,7 +15,7 @@ const AboutSection = () => {
             </Translate>
           </h2>
 
-          <p className="text-slate-100 tracking-tight text-xl text-center max-w-xl">
+          <p className="text-slate-100 leading-relaxed text-xl text-center max-w-xl">
             <Translate id="aboutsection.description">
               O Amazonas DataHub é um projeto do Programa Institucional de Bolsas de Iniciação Científica (PIBIC) da Universidade Federal do Amazonas, realizado no curso de Estatística, na área de Probabilidade e Estatística.
 
