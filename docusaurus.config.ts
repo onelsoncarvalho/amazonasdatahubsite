@@ -119,7 +119,7 @@ const config: Config = {
             },
             {
               label: "Documentação em Python",
-              href: "https://onelsoncarvalho.github.io/amazonasdatahub",
+              href: "https://onelsoncarvalho.github.io/amazonasdatahubpy",
             },
           ],
         },

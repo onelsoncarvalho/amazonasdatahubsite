@@ -8,7 +8,7 @@ format: docusaurus-md
 Caso não tenha instalado o `amazonasdatahub`, veja a documentação das versões me Python e em R:
 
 - [Documentação da versão em R](https://onelsoncarvalho.github.io/amazonasdatahub)
-- [Documentação da versão em Python](https://onelsoncarvalho.github.io/amazonasdatahub)
+- [Documentação da versão em Python](https://onelsoncarvalho.github.io/amazonasdatahubpy)
 
 Veja a documentação de cada base de dados pelos links abaixo.
 

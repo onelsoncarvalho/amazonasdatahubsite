@@ -8,7 +8,7 @@ format: docusaurus-md
 If you haven't installed the `amazonasdatahub`, check the installation page:
 
 - [amazonasdatahub installation - R version](https://onelsoncarvalho.github.io/amazonasdatahub).
-- [amazonasdatahub installation - Python version](https://onelsoncarvalho.github.io/amazonasdatahub)
+- [amazonasdatahub installation - Python version](https://onelsoncarvalho.github.io/amazonasdatahubpy)
 
 Read the documentation of each dataset at the links below.
 
