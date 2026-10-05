@@ -1,0 +1,49 @@
+---
+title: Incidência de AIDS em Manaus
+format: docusaurus-md
+---
+
+
+
+
+Importando o pacote
+
+
+```r
+library(amazonasdatahub)
+```
+
+## Série temporal da contagem de casos de AIDS em Manaus
+
+A base de dados `aids_amazonas` fornece dados das ocorrências de AIDS
+nos municípios do Amazonas.
+
+Uma das análises que podem ser feitas é: verificar a série temporal da
+contagem de casos filtrado de determinado município, onde os casos são
+agrupados pelo sexo do indivíduo observado. Para fazer isso,
+utilizaremos os pacotes `dplyr` para estruturar os dados, e o `ggplot`
+para fazer o gráfico e customizá-lo.
+
+
+```r
+# install.packages(c("dplyr", "ggplot2", "lubridate"))
+require(dplyr)
+require(ggplot2)
+
+# Filtrando dados, agrupando e plotando:
+aids_amazonas %>%
+  filter(name_muni == "Manaus") %>%
+  group_by(gender) %>%
+  ggplot(aes(x = year, y = cases, group = gender, color = gender)) +
+  geom_line() +
+  scale_color_manual(values = c("blue", "red")) +
+  theme_minimal() +
+  labs(
+    title = "Contagem de casos de AIDS em Manaus (2011-2023)",
+    x = "Ano",
+    y = "Contagem",
+    color = "Gênero"
+  )
+```
+
+![](aids-amazonas.markdown_strict_files/figure-markdown_strict/unnamed-chunk-2-1.png)
