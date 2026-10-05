@@ -1,5 +1,11 @@
 {
   "label": "Ensino",
   "collapsible": true,
-  "collapsed": false 
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Ensino",
+    "description": "Selecione um dos tópicos abaixo para visualizar os materiais de ensino",
+    "slug": "/ensino"
+  }
 }
