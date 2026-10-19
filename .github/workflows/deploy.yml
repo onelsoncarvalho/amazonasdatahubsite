@@ -23,9 +23,7 @@ concurrency:
 env:
   # Hosted GitHub runners have 7 GB of memory available, let's use 6 GB
   NODE_OPTIONS: --max-old-space-size=6144
-
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -33,16 +31,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18.x
-          cache: yarn
       - name: Enable Corepack
         run: corepack enable
+      - name: Activate Yarn 4.18.1
+        run: corepack prepare yarn@4.18.1 --activate
+      - name: Verify Yarn version
+        run: yarn --version
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --non-interactive
+        run: yarn install --immutable
       - name: Build
         run: yarn build
       - name: Setup Pages
@@ -50,7 +51,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
           path: build
       - name: Deploy to GitHub Pages
         id: deployment
