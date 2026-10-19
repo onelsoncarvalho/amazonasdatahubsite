@@ -1,4 +1,4 @@
-## main branch
+## AmazonasDataHub
 
 - tailwindcss configured
 - Algolia Docsearch configured
