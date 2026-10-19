@@ -1,0 +1,72 @@
+---
+title: Relação entre Letramento Físico e Desempenho em Leitura
+format: docusaurus-md
+---
+
+
+
+
+Importando o pacote
+
+
+```r
+library(amazonasdatahub)
+```
+
+## Relação entre Letramento Físico e Desempenho em Leitura
+
+Com a base de dados `srl_muni`, podemos reproduzir os resultados
+acadêmicos de sua fonte. Ao analisarmos a correlação entre as variávies,
+podemos notar que o letramento físico e competência motora `mc` tem
+correlação significativa com o desempenho em leitura \``tde`.
+
+
+```r
+# Importanto pacotes para organizacao e visualizacao de dados
+require(ggplot2)
+require(dplyr)
+
+# Selecionando as variáveis numéricas e determinando a matriz de correlação
+corr <- srl_muni %>%
+    select(where(is.numeric)) %>%
+    cor()
+
+
+# Convertendo a matriz para dataframe
+corr_df <- as.data.frame(as.table(corr))
+names(corr_df) <- c("Variavel1", "Variavel2", "Correlacao")
+
+
+# Plotando a matriz de correlação
+ggplot(corr_df,
+    aes(x = Variavel1, y = Variavel2, fill = Correlacao)
+  ) +
+  geom_tile(color = "white") +
+  geom_text(
+    aes(label = round(Correlacao, 2)), size = 3) +
+  scale_fill_gradient2(
+    low = "#2166AC",
+    mid = "white",
+    high = "#d50e0b",
+    midpoint = 0,
+    limits = c(-1, 1),
+    name = "Correlação"
+  ) +
+  coord_fixed() +
+  labs(
+    title = "Matriz de correlação: Competência Motora \ne Desempenho em Leitura", 
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(
+      angle = 45,
+      hjust = 1
+    ),
+    panel.grid = element_blank()
+  )
+```
+
+![](srl_muni.markdown_strict_files/figure-markdown_strict/unnamed-chunk-2-1.png)
+
+Podemos notar que os resultados se assemelham aos resultados do artigo
+original.
