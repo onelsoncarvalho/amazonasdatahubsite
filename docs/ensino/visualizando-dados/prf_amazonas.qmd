@@ -10,7 +10,7 @@ Importando o pacote
 library(amazonasdatahub)
 ```
 
-## Boxplots do nível de água (em metros) do Rio Negro (Amazonas)
+## Contagem de acidentes por condição climática
 
 Com a base de dados ```prf_amazonas```, podemos fazer análises de dados de acidentes registrados pela Polícia Rodoviária Federal (PRF) no estado do Amazonas no ano de 2025.
 
@@ -26,6 +26,45 @@ require(ggplot2)
 
 # Contando acidentes agrupados por condicao climatica e fazendo o grafico
 prf_amazonas %>%
+  count(weather) %>%
+  mutate(
+    weather = fct_reorder(weather, -n)
+  ) %>%
+  ggplot(aes(x = weather, y = n)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  geom_text(aes(label = n), vjust = -0.5) +
+  theme_minimal() +
+  labs(
+    title = "Contagem de acidentes por condição climática",
+    x = "Condição climática",
+    y = "Contagem"
+  )
+```
+
+Veja que a condição ```Céu claro``` está dividida, já que uma tem está escrita com acento agudo ```Céu claro``` e outra está sem acento agudo, ```Ceu claro```. Podemos avaliar individualmente as condições climáticas disponíveis para verificar se faz sentido.
+
+
+```{r}
+unique(prf_amazonas$weather)
+```
+
+Note que além de ```Céu claro```, temos ```Nevoeiro/Neblina``` e ```Nevoeiro/neblina```. Essa pequena mudança de letras maiúsculas já interfere na leitura dos dados. Por isso, vamos padronizar
+
+```{r}
+prf_amazonas_clean <- prf_amazonas %>%
+  mutate(
+    weather = case_when(
+      weather == 'Ceu Claro' ~ 'Céu Claro',
+      weather == 'Nevoeiro/neblina' ~ 'Nevoeiro/Neblina',
+      TRUE~weather
+    )
+  )
+```
+
+Agora é possível visualizar o gráfico de barras dos dados corrigidos.
+
+```{r}
+prf_amazonas_clean %>%
   count(weather) %>%
   mutate(
     weather = fct_reorder(weather, -n)

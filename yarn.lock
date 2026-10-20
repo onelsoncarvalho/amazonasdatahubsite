@@ -5163,6 +5163,7 @@ __metadata:
     "@mdx-js/react": "npm:^3.0.0"
     autoprefixer: "npm:^10.4.16"
     clsx: "npm:^2.0.0"
+    google-translate-api-x: "npm:^10.7.3"
     postcss: "npm:^8.4.33"
     prism-react-renderer: "npm:^2.3.0"
     react: "npm:^18.0.0"
@@ -6161,6 +6162,13 @@ __metadata:
     merge2: "npm:^1.4.1"
     slash: "npm:^4.0.0"
   checksum: 10c0/a8d7cc7cbe5e1b2d0f81d467bbc5bc2eac35f74eaded3a6c85fc26d7acc8e6de22d396159db8a2fc340b8a342e74cac58de8f4aee74146d3d146921a76062664
+  languageName: node
+  linkType: hard
+
+"google-translate-api-x@npm:^10.7.3":
+  version: 10.7.3
+  resolution: "google-translate-api-x@npm:10.7.3"
+  checksum: 10c0/1a4f64acf91ce9fcd70e94abbc596974578ab6bf20667d4bd049dff2bbd853721ba9b33ff797c3e926d2d15e2dec9c0f45949501d40dceea7783c225f4aa6584
   languageName: node
   linkType: hard
 

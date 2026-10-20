@@ -1,0 +1,11 @@
+{
+  "label": "Visualizing Data",
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Visualizing Data",
+    "description": "Tutorials and data analysis",
+    "slug": "/ensino/visualizando-dados"
+  }
+}

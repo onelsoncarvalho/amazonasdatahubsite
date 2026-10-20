@@ -6,75 +6,75 @@ format: docusaurus-md
 
 # agriculture_amazonas
 
-Plant production data from the Institute of Sustainable Agricultural and Forestry Development of Amazonas - IDAM (2023).
+Dados de produção vegetal do Instituto de Desenvolvimento Agropecuário e Florestal Sustentável do Amazonas (2023)
 
-### Description
+### Descrição
 
-This database, which is the consolidation of data from IDAM's activity reports, provides crop production data for crops that this institute considers a priority.
+Esse banco de dados que é a consolidação de dados dos relatórios de atividades do IDAM, traz dados de produção vegetal de cultivos no qual esse instituto consideram prioritários.
 
-### Usage
+### Uso
 
 ```{r, eval = FALSE}
 agriculture_amazonas
 ```
 
-### Format
+### Formato
 
-‘agriculture_amazonas’ A data frame with 1072 rows and 13 columns:
+‘agriculture_amazonas’ Um data frame com 1072 linhas e 13 colunas:
 
 #### municipality
 
-Municipality
+Município
 
 #### local_unit
 
-Local Unit of the Institute
+Unidade Local do IDAM
 
 #### n_beneficiary
 
-Number of assisted beneficiaries
+Número de beneficiários assistidos
 
 #### planted
 
-Planted area in hectares (ha)
+Área plantada em hectares (ha)
 
 #### harvested
 
-Harvested area in hectares (ha)
+Área colhida em hectares (ha)
 
 #### production
 
-Production (in the unit of measurement - measure)
+Produção (na unidade de medida - measure)
 
 #### estimated_n_beneficiary
 
-Estimate of the number of beneficiaries
+Estimativa para o número de beneficiários
 
 #### estimated_planted
 
-Estimate of the planted area (ha)
+Estimativa para a área plantada (ha)
 
 #### estimated_harvested
 
-Estimate of the harvested area (ha)
+Estimativa para a área colhida (ha)
 
 #### estimated_production
 
-Estimate of production (in the unit of measurement - measure)
+Estimativa para a produção (na unidade de medida - measure)
 
 #### measure
 
-Unit of Measurement of production
+Unidade de medida da produção
 
 
 #### cultivation
 
-Cultivation
+Cultivo
 
 #### year
 
-Year of cultivation
+Ano do cultivo
 
-### Source
+### Fonte
 
 https://www.idam.am.gov.br/biblioteca/relatorio-de-atividades-rat-23-2/
