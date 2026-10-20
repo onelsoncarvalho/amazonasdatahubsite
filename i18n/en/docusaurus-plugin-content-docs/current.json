@@ -1,22 +1,34 @@
 {
-  "version.label": {
-    "message": "Next",
-    "description": "The label for version current"
-  },
-  "sidebar.tutorialSidebar.category.Tutorial - Básico": {
-    "message": "Tutorial - Basics",
-    "description": "The label for category Tutorial - Básico in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Tutorial - Básico.link.generated-index.description": {
-    "message": "In this tutorial, you'll learn how to use AmazonasDatahub to improve your statistical analysis.",
-    "description": "The generated-index page description for category Tutorial - Básico in sidebar tutorialSidebar"
-  },
   "sidebar.tutorialSidebar.category.Dados": {
     "message": "Data",
-    "description": "The label for category Dados in sidebar tutorialSidebar"
+    "description": "The label for category 'Dados' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.Datasets": {
-    "message": "Datasets",
-    "description": "The label for category Datasets in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Ensino": {
+    "message": "Teaching",
+    "description": "The label for category 'Ensino' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Ensino.link.generated-index.title": {
+    "message": "Teaching",
+    "description": "The generated-index page title for category 'Ensino' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Ensino.link.generated-index.description": {
+    "message": "Select one of the topics below to view teaching materials",
+    "description": "The generated-index page description for category 'Ensino' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Visualizando Dados": {
+    "message": "Visualizing Data",
+    "description": "The label for category 'Visualizando Dados' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Visualizando Dados.link.generated-index.title": {
+    "message": "Visualizing Data",
+    "description": "The generated-index page title for category 'Visualizando Dados' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Visualizando Dados.link.generated-index.description": {
+    "message": "Tutorials and data analysis",
+    "description": "The generated-index page description for category 'Visualizando Dados' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Pesquisa": {
+    "message": "Search",
+    "description": "The label for category 'Pesquisa' in sidebar 'tutorialSidebar'"
   }
 }

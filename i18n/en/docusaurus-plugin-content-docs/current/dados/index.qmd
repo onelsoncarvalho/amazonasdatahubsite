@@ -1,18 +1,18 @@
 ---
-title: "Datasets"
+title: "Bases de Dados"
 format: docusaurus-md
 ---
 
-# Data Documentation
+# Documentação dos Dados
 
-If you haven't installed the `amazonasdatahub`, check the installation page:
+Caso não tenha instalado o `amazonasdatahub`, veja a documentação das versões me Python e em R:
 
-- [amazonasdatahub installation - R version](https://onelsoncarvalho.github.io/amazonasdatahub).
-- [amazonasdatahub installation - Python version](https://onelsoncarvalho.github.io/amazonasdatahubpy)
+- [Documentação da versão em R](https://onelsoncarvalho.github.io/amazonasdatahub)
+- [Documentação da versão em Python](https://onelsoncarvalho.github.io/amazonasdatahubpy)
 
-Read the documentation of each dataset at the links below.
+Veja a documentação de cada base de dados pelos links abaixo.
 
-| Function | Description |
+| Função | Descrição |
 | :----- |:--------- |
 |[agriculture_amazonas](./agriculture_amazonas)|Plant production data from the Institute of Sustainable Agricultural and Forestry Development of Amazonas - IDAM (2023)|
 |[aids_amazonas](./aids_amazonas)|A dataset of AIDS occurrences from 2011 to 2023 in Amazonas|
